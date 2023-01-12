@@ -35,14 +35,15 @@ def read_kanji(limit=None):
 
 def read_newspaper_kanji():
     current_directory = os.path.dirname(sys.argv[0])
-    newspaper_path = os.path.join(current_directory, "data", "kanji-frequency-in-newspapers.txt")
+    newspaper_path = os.path.join(current_directory, "data", "kanji-frequency-in-newspapers.txt.gz")
+
+    with gzip.open(newspaper_path, "rt") as file:
+        newspaper_data = file.read()
 
     kanji_list = []
     frequencies = {}
-    with open(newspaper_path, "r") as file:
-        contents = file.read()
 
-    for i, kanji in enumerate(filter(None, contents.split("\n"))):
+    for i, kanji in enumerate(filter(None, newspaper_data.split("\n"))):
         kanji_list.append(kanji)
 
         freq = i + 1
