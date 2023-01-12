@@ -1,0 +1,24 @@
+<div id="review">
+  <div id="japanese">
+    {% for part in word %}
+      {% if part.furigana %}
+        <ruby>
+          {{ part.kanji }}
+          <rp>(</rp>
+          <rt>{{ part.furigana }}</rt>
+          <rp>)</rp>
+        </ruby>
+      {% else %}
+        {{ part.kanji }}
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <div id="english">
+    {{ definition }}
+
+    {% if notes %}
+      <div class="notes">{{ notes }}</div>
+    {% endif %}
+  </div>
+</div>
