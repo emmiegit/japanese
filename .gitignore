@@ -1,3 +1,11 @@
+# Python
+__pycache__/
+*.py[cod]
+.env
+.venv
+env/
+venv/
+
 # Miscellaneous
 .*.sw?
 *~
