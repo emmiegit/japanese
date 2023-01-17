@@ -17,7 +17,7 @@ $ pip3 install --user requirements.txt
 Run:
 
 ```
-$ python -m kotoba [-p PORT] [-d DATABASE]
+$ flask run
 ```
 
 Default settings:
