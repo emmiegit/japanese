@@ -17,3 +17,5 @@ function answer(cardId, action) {
     // TODO
   });
 }
+
+// TODO setup page
