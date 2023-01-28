@@ -136,7 +136,7 @@ class CalendarGenerator:
 
         # Iterate until the correct day-of-week for the start of the month
         date = datetime(self.year, self.month, 1)
-        while weeks.day_of_week() == DayOfWeek(date.weekday()):
+        while weeks.day_of_week() != DayOfWeek(date.weekday()):
             weeks.incr_day()
 
         for day in range(1, 32):
