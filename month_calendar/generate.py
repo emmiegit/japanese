@@ -95,11 +95,11 @@ class WeekBracket:
 
 class CalendarGenerator:
     def __init__(
-        self, start_date=None, week_start=DayOfWeek.SUNDAY, furigana=False, path=".",
+        self, year=None, month=None, week_start=DayOfWeek.SUNDAY, furigana=False, path=".",
     ):
-        date = start_date or datetime.now()
-        self.year = date.year
-        self.month = date.month
+        now = datetime.now()
+        self.year = year or now.year
+        self.month = month or now.month
 
         self.week_start = week_start
         self.furigana = furigana
