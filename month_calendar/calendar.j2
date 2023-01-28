@@ -1,10 +1,11 @@
+{% from 'utils.j2' import ruby %}
+
 <html>
 <head>
   <title>{{ year }}年 {{ month }}月 カレンダー</title>
 </head>
 <body>
   {% include 'styles.j2' %}
-  {% include 'utils.j2' %}
 
   <table class="calendar">
     <caption>{{ year }}年 {{ month }}月</div>
