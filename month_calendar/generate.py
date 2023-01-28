@@ -61,7 +61,7 @@ class WeekBracket:
     def incr_week(self):
         self.week_index += 1
 
-        if week_index > len(self.weeks):
+        if self.week_index > len(self.weeks):
             self.new_row()
 
     def day_of_week(self):
