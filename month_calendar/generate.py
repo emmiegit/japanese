@@ -58,11 +58,17 @@ class WeekBracket:
             self.day_index = 0
             self.incr_week()
 
+        assert self.day_index < 7
+        assert self.week_index < len(self.weeks)
+
     def incr_week(self):
         self.week_index += 1
 
-        if self.week_index > len(self.weeks):
+        if self.week_index <= len(self.weeks):
             self.new_row()
+
+        assert self.day_index < 7
+        assert self.week_index < len(self.weeks)
 
     def day_of_week(self):
         return DayOfWeek(self.days[self.day_index])
@@ -108,7 +114,7 @@ class CalendarGenerator:
         self.template = self.env.get_template("calendar.j2")
 
     def weekday_data(self, weekday_enum):
-        return self.week_days[weekday_enum - 1]
+        return self.week_days[weekday_enum.value - 1]
 
     def generate_week_days(self):
         week_days = [self.weekday_data(enum) for enum in DayOfWeek]
