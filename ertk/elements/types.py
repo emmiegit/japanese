@@ -15,3 +15,11 @@ def flatten(list_class, first, second):
         return list_class([first] + second.items)
     else:
         return list_class([first, second])
+
+def merge_lists(list_class, first, second):
+    if isinstance(second, list_class):
+        items = [first] + second.items
+    else:
+        items = [first, second]
+
+    return list_class(items=items)

@@ -56,14 +56,27 @@ def p_expression_multiple(p):
 
 def p_expression_list(p):
     '''
-    expression : list_item '+' list_item
-               | list_item '/' list_item
+    expression : list_horizontal
+               | list_vertical
     '''
 
-    if p[2] == '+':
-        p[0] = flatten(HorizontalList, p[1], p[3])
-    elif p[2] == '/':
-        p[0] = flatten(VerticalList, p[1], p[3])
+    p[0] = p[1]
+
+def p_list_horizontal(p):
+    '''
+    list_horizontal : list_item '+' list_item
+                    | list_item '+' list_horizontal
+    '''
+
+    p[0] = merge_lists(HorizontalList, p[1], p[3])
+
+def p_list_vertical(p):
+    '''
+    list_vertical : list_item '/' list_item
+                  | list_item '/' list_vertical
+    '''
+
+    p[0] = merge_lists(VerticalList, p[1], p[3])
 
 def p_list_item_name(p):
     '''
