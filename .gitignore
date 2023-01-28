@@ -6,6 +6,9 @@ __pycache__/
 env/
 venv/
 
+# Generated
+month-calendar.html
+
 # Miscellaneous
 .*.sw?
 *~
