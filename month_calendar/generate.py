@@ -15,13 +15,13 @@ import jinja2
 
 @unique
 class DayOfWeek(Enum):
-    MONDAY = 1
-    TUESDAY = 2
-    WEDNESDAY = 3
-    THURSDAY = 4
-    FRIDAY = 5
-    SATURDAY = 6
-    SUNDAY = 7
+    MONDAY = 0
+    TUESDAY = 1
+    WEDNESDAY = 2
+    THURSDAY = 3
+    FRIDAY = 4
+    SATURDAY = 5
+    SUNDAY = 6
 
 
 def rotate_right(items, shift):
@@ -117,7 +117,7 @@ class CalendarGenerator:
 
         # Iterate until the correct day-of-week for the start of the month
         date = datetime(self.year, self.month, 1)
-        while weeks.day_of_week(self.week_start) == DayOfWeek(date.isoweekday()):
+        while weeks.day_of_week(self.week_start) == DayOfWeek(date.weekday()):
             weeks.incr_day()
 
         for day in range(1, 32):
