@@ -1,0 +1,64 @@
+{
+    "words": {
+        "kanji": "漢字",
+        "hiragana": "ひらがな",
+        "symbol": "Symbol",
+        "planet": "Planet",
+        "english": "English"
+    },
+    "after": {
+        "kanji": ["曜", "日"],
+        "hiragana": ["よう", "び"]
+    },
+    "days-of-the-week": [
+        {
+            "kanji": "月",
+            "hiragana": "げつ",
+            "symbol": "Moon",
+            "planet": "Moon",
+            "english": "Monday"
+        },
+        {
+            "kanji": "火",
+            "hiragana": "か",
+            "symbol": "Fire",
+            "planet": "Mars",
+            "english": "Tuesday"
+        },
+        {
+            "kanji": "水",
+            "hiragana": "すい",
+            "symbol": "Water",
+            "planet": "Mercury",
+            "english": "Wednesday"
+        },
+        {
+            "kanji": "木",
+            "hiragana": "もく",
+            "symbol": "Tree",
+            "planet": "Jupiter",
+            "english": "Thursday"
+        },
+        {
+            "kanji": "金",
+            "hiragana": "きん",
+            "symbol": "Gold",
+            "planet": "Venus",
+            "english": "Friday"
+        },
+        {
+            "kanji": "土",
+            "hiragana": "ど",
+            "symbol": "Soil",
+            "planet": "Saturn",
+            "english": "Saturday"
+        },
+        {
+            "kanji": "日",
+            "hiragana": "にち",
+            "symbol": "Sun",
+            "planet": "Sun",
+            "english": "Sunday"
+        }
+    ]
+}
