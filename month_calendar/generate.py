@@ -158,4 +158,4 @@ class CalendarGenerator:
 
 if __name__ == "__main__":
     generator = CalendarGenerator()
-    generator.output("month-calendar.html")
+    generator.output("calendar.html")
