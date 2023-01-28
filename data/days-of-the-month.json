@@ -6,6 +6,7 @@
         "chinese": "Chinese numerals",
         "type-normal": "Normal counting",
         "type-tsu": "つ counting",
+        "type-tsu-special": "つ counting, with modification",
         "type-special": "Special case"
     },
     "days-of-the-month": [
@@ -19,7 +20,7 @@
             "arabic": "2日",
             "chinese": "二日",
             "hiragana": "ふつか",
-            "type": "tsu"
+            "type": "tsu-special"
         },
         {
             "arabic": "3日",
@@ -37,19 +38,19 @@
             "arabic": "5日",
             "chinese": "五日",
             "hiragana": "いっか",
-            "type": "tsu"
+            "type": "tsu-special"
         },
         {
             "arabic": "6日",
             "chinese": "六日",
             "hiragana": "むいか",
-            "type": "tsu"
+            "type": "tsu-special"
         },
         {
             "arabic": "7日",
             "chinese": "七日",
             "hiragana": "なのか",
-            "type": "special"
+            "type": "tsu-special"
         },
         {
             "arabic": "8日",
