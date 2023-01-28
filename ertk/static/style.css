@@ -1,0 +1,19 @@
+.element .vertical {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.element .vertical > .part {
+    display: block;
+    padding: 0.2em;
+}
+
+.element .vertical .under {
+    border-top: thin solid black;
+}
+
+.element .vetical .separator {
+    display: none;
+}

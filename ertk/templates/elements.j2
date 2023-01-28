@@ -1,0 +1,26 @@
+{% macro render(element) %}
+  {% if isinstance(element, Name) %}
+    <span class="name">{{ element }}</span>
+  {% elif isinstance(element, Multiplied) %}
+    <span class="multiple">{{ element.count }}&times; {{ render(element) }}</span>
+  {% elif isinstance(element, HorizontalList) %}
+    <span class="horizontal">
+      {% for element in element.items %}
+        {{ render(element) }} {% if not loop.last %}+{% endif %}
+      {% endfor %}
+    </span>
+  {% elif type == 'vertical' %}
+    <span class="vertical">
+      {% for element in element.items %}
+        {% if loop.first %}
+          <span class="top part">{{ render(element) }}</span>
+        {% else %}
+          <span class="separator">/</span>
+          <span class="under part">{{ render(element) }}</span>
+        {% endif %}
+      {% endfor %}
+    </span>
+  {% endif %}
+{% endmacro %}
+
+<span class="element">{{ render(element) }}</span>
