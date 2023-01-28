@@ -81,20 +81,21 @@ class WeekBracket:
 
 
 class CalendarGenerator:
-    def __init__(self, start_date=None, week_start=SUNDAY, furigana=False, path="."):
+    def __init__(self, start_date=None, week_start=DayOfWeek.SUNDAY, furigana=False, path="."):
         date = start_date or datetime.now()
         self.year = date.year
         self.month = date.month
 
+        self.week_start = week_start
         self.furigana = furigana
 
         with open(os.path.join(path, "..", "data", "days-of-the-month.json")) as file:
-            data = json.load()
+            data = json.load(file)
             self.month_days = data["days-of-the-month"]
             self.words = data["words"]
 
         with open(os.path.join(path, "..", "data", "days-of-the-week.json")) as file:
-            data = json.load()
+            data = json.load(file)
             self.week_days = data["days-of-the-week"]
             self.week_days_after = data["after"]
 
