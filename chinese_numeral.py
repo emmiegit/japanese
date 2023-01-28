@@ -29,6 +29,33 @@ UNITS = [
     ("京", 10_000_000_000_000_000),
 ]
 
+UNIT_ALIASES = {
+    "0": 0,
+    "1": 1,
+    "壱": 1,
+    "壹": 1,
+    "弌": 1,
+    "2": 2,
+    "弐": 2,
+    "弍": 2,
+    "貳": 2,
+    "貮": 2,
+    "3": 3,
+    "参": 3,
+    "弎": 3,
+    "4": 4,
+    "5": 5,
+    "伍": 5,
+    "6": 6,
+    "陸": 6,
+    "7": 7,
+    "漆": 7,
+    "柒": 7,
+    "8": 8,
+    "捌": 8,
+    "9": 9,
+    "玖": 9,
+}
 
 def chinese_value(cchar):
     # Error checking
@@ -43,7 +70,10 @@ def chinese_value(cchar):
         if kanji == cchar:
             return value
 
-    raise ValueError(f"No numeric value found for character {cchar}")
+    try:
+        return UNIT_ALIASES[kanji]
+    except KeyError:
+        raise ValueError(f"No numeric value found for character {cchar}")
 
 
 def arabic_to_chinese(num, leading_one=False):
@@ -80,4 +110,6 @@ def arabic_to_chinese(num, leading_one=False):
 
 
 def chinese_to_arabic(cnum):
-    ...
+    for cchar in cnum:
+        value = chinese_value(cchar)
+
