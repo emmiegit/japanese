@@ -1,0 +1,199 @@
+{
+    "words": {
+        "kanji": "漢字",
+        "hiragana": "ひらがな",
+        "arabic": "Arabic numerals",
+        "chinese": "Chinese numerals",
+        "type-normal": "Normal counting",
+        "type-tsu": "つ counting",
+        "type-special": "Special case"
+    },
+    "days-of-the-month": [
+        {
+            "arabic": "1日",
+            "chinese": "一日",
+            "hiragana": "ついたち",
+            "type": "special"
+        },
+        {
+            "arabic": "2日",
+            "chinese": "二日",
+            "hiragana": "ふつか",
+            "type": "tsu"
+        },
+        {
+            "arabic": "3日",
+            "chinese": "三日",
+            "hiragana": "みっか",
+            "type": "tsu"
+        },
+        {
+            "arabic": "4日",
+            "chinese": "四日",
+            "hiragana": "よっか",
+            "type": "tsu"
+        },
+        {
+            "arabic": "5日",
+            "chinese": "五日",
+            "hiragana": "いっか",
+            "type": "tsu"
+        },
+        {
+            "arabic": "6日",
+            "chinese": "六日",
+            "hiragana": "むいか",
+            "type": "tsu"
+        },
+        {
+            "arabic": "7日",
+            "chinese": "七日",
+            "hiragana": "なのか",
+            "type": "special"
+        },
+        {
+            "arabic": "8日",
+            "chinese": "八日",
+            "hiragana": "ようか",
+            "type": "special"
+        },
+        {
+            "arabic": "9日",
+            "chinese": "九日",
+            "hiragana": "ここのか",
+            "type": "tsu"
+        },
+        {
+            "arabic": "10日",
+            "chinese": "十日",
+            "hiragana": "とうか",
+            "type": "tsu"
+        },
+        {
+            "arabic": "11日",
+            "chinese": "十一日",
+            "hiragana": "じゅういちにち",
+            "type": "normal"
+        },
+        {
+            "arabic": "12日",
+            "chinese": "十二日",
+            "hiragana": "じゅうににち",
+            "type": "normal"
+        },
+        {
+            "arabic": "13日",
+            "chinese": "十三日",
+            "hiragana": "じゅうさんにち",
+            "type": "normal"
+        },
+        {
+            "arabic": "14日",
+            "chinese": "十四日",
+            "hiragana": "じゅうよっか",
+            "type": "normal"
+        },
+        {
+            "arabic": "15日",
+            "chinese": "十五日",
+            "hiragana": "じゅうごにち",
+            "type": "normal"
+        },
+        {
+            "arabic": "16日",
+            "chinese": "十六日",
+            "hiragana": "じゅうろくにち",
+            "type": "normal"
+        },
+        {
+            "arabic": "17日",
+            "chinese": "十七日",
+            "hiragana": "じゅうしちにち",
+            "type": "normal"
+        },
+        {
+            "arabic": "18日",
+            "chinese": "十八日",
+            "hiragana": "じゅうはちにち",
+            "type": "normal"
+        },
+        {
+            "arabic": "19日",
+            "chinese": "十九日",
+            "hiragana": "じゅうくにち",
+            "type": "normal"
+        },
+        {
+            "arabic": "20日",
+            "chinese": "二十日",
+            "hiragana": "はつか",
+            "type": "special"
+        },
+        {
+            "arabic": "21日",
+            "chinese": "二十一日",
+            "hiragana": "にじゅういちにち",
+            "type": "normal"
+        },
+        {
+            "arabic": "22日",
+            "chinese": "二十二日",
+            "hiragana": "にじゅうににち",
+            "type": "normal"
+        },
+        {
+            "arabic": "23日",
+            "chinese": "二十三日",
+            "hiragana": "にじゅうさんにち",
+            "type": "normal"
+        },
+        {
+            "arabic": "24日",
+            "chinese": "二十四日",
+            "hiragana": "にじゅうよっか",
+            "type": "normal"
+        },
+        {
+            "arabic": "25日",
+            "chinese": "二十五日",
+            "hiragana": "にじゅうごにち",
+            "type": "normal"
+        },
+        {
+            "arabic": "26日",
+            "chinese": "二十六日",
+            "hiragana": "にじゅうろくにち",
+            "type": "normal"
+        },
+        {
+            "arabic": "27日",
+            "chinese": "二十七日",
+            "hiragana": "にじゅうしちにち",
+            "type": "normal"
+        },
+        {
+            "arabic": "28日",
+            "chinese": "二十八日",
+            "hiragana": "にじゅうはちにち",
+            "type": "normal"
+        },
+        {
+            "arabic": "29日",
+            "chinese": "二十九日",
+            "hiragana": "にじゅうくにち",
+            "type": "normal"
+        },
+        {
+            "arabic": "30日",
+            "chinese": "三十日",
+            "hiragana": "さんじゅうにち",
+            "type": "normal"
+        },
+        {
+            "arabic": "31日",
+            "chinese": "三十一日",
+            "hiragana": "さんじゅういちにち",
+            "type": "normal"
+        }
+    ]
+}
