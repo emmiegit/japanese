@@ -6,12 +6,14 @@ Generate an HTML table which serves as a calendar for the month.
 Each cell will be marked according to its reading, which will show on hover.
 """
 
+import argparse
 import json
 import os
 from datetime import datetime
 from enum import Enum, unique
 
 import jinja2
+
 
 @unique
 class DayOfWeek(Enum):
@@ -46,10 +48,7 @@ class WeekBracket:
     """
 
     def __init__(self, start_day):
-        self.days = [
-            DayOfWeek((start_day.value + i) % 7)
-            for i in range(7)
-        ]
+        self.days = [DayOfWeek((start_day.value + i) % 7) for i in range(7)]
         self.weeks = []
         self.new_row()
         self.week_index = 0
@@ -95,7 +94,9 @@ class WeekBracket:
 
 
 class CalendarGenerator:
-    def __init__(self, start_date=None, week_start=DayOfWeek.SUNDAY, furigana=False, path="."):
+    def __init__(
+        self, start_date=None, week_start=DayOfWeek.SUNDAY, furigana=False, path=".",
+    ):
         date = start_date or datetime.now()
         self.year = date.year
         self.month = date.month
@@ -147,14 +148,16 @@ class CalendarGenerator:
                 break
 
             data = self.month_days[day - 1]
-            weeks.append({
-                "number": day,
-                "data": data,
-                "arabic": data["arabic"],
-                "chinese": data["chinese"],
-                "hiragana": data["hiragana"],
-                "class": f"day-{data['type']}",
-            })
+            weeks.append(
+                {
+                    "number": day,
+                    "data": data,
+                    "arabic": data["arabic"],
+                    "chinese": data["chinese"],
+                    "hiragana": data["hiragana"],
+                    "class": f"day-{data['type']}",
+                }
+            )
 
         return weeks.done()
 
