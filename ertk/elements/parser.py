@@ -60,7 +60,6 @@ def p_expression_list(p):
                | list_item '/' list_item
     '''
 
-    # TODO flatten
     if p[2] == '+':
         p[0] = flatten(HorizontalList, p[1], p[3])
     elif p[2] == '/':
