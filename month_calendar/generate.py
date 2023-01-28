@@ -155,6 +155,7 @@ class CalendarGenerator:
             "year": self.year,
             "weeks": self.generate_month_days(),
             "week_days": self.generate_week_days(),
+            "week_days_after": self.week_days_after,
             "use_furigana": self.furigana,
         }
 

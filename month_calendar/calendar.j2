@@ -13,8 +13,8 @@
         <th>
           {% for week_day in week_days %}
             {{ ruby(
-              week_day.kanji + week_days_after.kanji,
-              week_day.hiragana + week_days_after.hiragana,
+              [week_day.kanji] + week_days_after.kanji,
+              [week_day.hiragana] + week_days_after.hiragana,
               use_furigana,
             ) }}
           {% endfor %}
