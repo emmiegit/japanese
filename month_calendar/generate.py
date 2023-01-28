@@ -28,6 +28,7 @@ def rotate_right(items, shift):
     if not items:
         return
 
+    assert shift >= 0
     shift %= len(items)
     items.extend(items[:shift])
     del items[:shift]
