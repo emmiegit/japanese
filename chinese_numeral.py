@@ -30,6 +30,22 @@ UNITS = [
 ]
 
 
+def chinese_value(cchar):
+    # Error checking
+    if len(cchar) != 1:
+        raise ValueError(f"Not a character: {cchar!r}")
+
+    for value, kanji in enumerate(DIGITS):
+        if kanji == cchar:
+            return value
+
+    for kanji, value in UNITS:
+        if kanji == cchar:
+            return value
+
+    raise ValueError(f"No numeric value found for character {cchar}")
+
+
 def arabic_to_chinese(num, leading_one=False):
     # Special case for zero
     if num == 0:
