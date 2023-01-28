@@ -95,7 +95,7 @@ class WeekBracket:
 
 class CalendarGenerator:
     def __init__(
-        self, year=None, month=None, week_start=DayOfWeek.SUNDAY, furigana=False, path=".",
+        self, *, year=None, month=None, week_start=DayOfWeek.SUNDAY, furigana=False, path=".",
     ):
         now = datetime.now()
         self.year = year or now.year
@@ -179,6 +179,74 @@ class CalendarGenerator:
             file.write(html)
 
 
+def get_weekday_from_name(name):
+    DAY_OF_WEEK_MAPPING = {
+        "sunday": DayOfWeek.SUNDAY,
+        "monday": DayOfWeek.MONDAY,
+        "tuesday": DayOfWeek.TUESDAY,
+        "wednesday": DayOfWeek.WEDNESDAY,
+        "thursday": DayOfWeek.THURSDAY,
+        "friday": DayOfWeek.FRIDAY,
+        "saturday": DayOfWeek.SATURDAY,
+    }
+
+    return DAY_OF_WEEK_MAPPING[name.lower()]
+
+
 if __name__ == "__main__":
-    generator = CalendarGenerator()
-    generator.output("calendar.html")
+    argparser = argparse.ArgumentParser(description="Japanese day-of-month calendar generator")
+    argparser.add_argument(
+        "-y",
+        "--year",
+        type=int,
+        dest="year",
+        default=None,
+        help="What year to use for the calendar.",
+    )
+    argparser.add_argument(
+        "-m",
+        "--month",
+        type=int,
+        dest="month",
+        default=None,
+        help="What month to use for the calendar.",
+    )
+    argparser.add_argument(
+        "-s",
+        "--start-day",
+        dest="start_day",
+        default="Sunday",
+        help="Day of week to begin a week on.",
+    )
+    argparser.add_argument(
+        "-F",
+        "--furigana",
+        "--use-furigana",
+        action="store_true",
+        dest="use_furigana",
+        help="Whether to add furigana to the days of the week."
+    )
+    argparser.add_argument(
+        "-p",
+        "--path",
+        dest="path",
+        default=".",
+        help="What path to read data from. Assumed to be the month_calendar directory of the repository by default.",
+    )
+    argparser.add_argument(
+        "-o",
+        "--output",
+        dest="output",
+        default="calendar.html",
+        help="What path to output the final HTML to.",
+    )
+    args = argparser.parse_args()
+
+    generator = CalendarGenerator(
+        year=args.year,
+        month=args.month,
+        week_start=get_weekday_from_name(args.start_day),
+        furigana=args.use_furigana,
+        path=args.path,
+    )
+    generator.output(args.output)
