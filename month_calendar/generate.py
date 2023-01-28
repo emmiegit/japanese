@@ -111,6 +111,10 @@ class CalendarGenerator:
 
         self.loader = jinja2.FileSystemLoader(searchpath=path)
         self.env = jinja2.Environment(loader=self.loader)
+        self.env.globals.update(
+            is_string=lambda s: isinstance(s, str),
+            zip=zip,
+        )
         self.template = self.env.get_template("calendar.j2")
 
     def weekday_data(self, weekday_enum):

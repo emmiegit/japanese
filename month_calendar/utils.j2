@@ -8,7 +8,7 @@
 {% macro ruby(kanji, hiragana, use_furigana) %}
   {% if use_furigana %}
     <ruby>
-      {% if isinstance(kanji, str) %}
+      {% if is_string(kanji) %}
         {# Entire thing is one string to ruby-ify #}
         {{ ruby_item(kanji, hiragana) }}
       {% else %}
@@ -19,6 +19,12 @@
       {% endif %}
     </ruby>
   {% else %}
-    {{ kanji }}
+    {% if is_string(kanji) %}
+      {{ kanji }}
+    {% else %}
+      {% for kanji, hiragana in zip(kanji, hiragana) %}
+        {{ kanji }}
+      {% endfor %}
+    {% endif %}
   {% endif %}
 {% endmacro %}
