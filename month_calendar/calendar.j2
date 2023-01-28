@@ -11,15 +11,15 @@
     <caption>{{ year }}年 {{ month }}月</div>
     <thead>
       <tr>
-        <th>
-          {% for week_day in week_days %}
+        {% for week_day in week_days %}
+          <th>
             {{ ruby(
               [week_day.kanji] + week_days_after.kanji,
               [week_day.hiragana] + week_days_after.hiragana,
               use_furigana,
             ) }}
-          {% endfor %}
-        </th>
+          </th>
+        {% endfor %}
       </tr>
     </thead>
     <tbody>
