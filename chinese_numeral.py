@@ -55,6 +55,7 @@ UNIT_ALIASES = {
     "捌": 8,
     "9": 9,
     "玖": 9,
+    "廿": 20,
 }
 
 def chinese_value(cchar):
@@ -110,6 +111,5 @@ def arabic_to_chinese(num, leading_one=False):
 
 
 def chinese_to_arabic(cnum):
-    for cchar in cnum:
-        value = chinese_value(cchar)
-
+    # TODO
+    raise NotImplementedError
