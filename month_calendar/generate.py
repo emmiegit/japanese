@@ -47,7 +47,7 @@ class WeekBracket:
 
     def __init__(self, start_day):
         self.days = [
-            (start_day.value + i) % 7
+            DayOfWeek((start_day.value + i) % 7)
             for i in range(7)
         ]
         self.weeks = []
@@ -75,7 +75,7 @@ class WeekBracket:
         assert self.week_index < len(self.weeks)
 
     def day_of_week(self):
-        return DayOfWeek(self.days[self.day_index])
+        return self.days[self.day_index]
 
     def get(self):
         return self.weeks[self.week_index][self.day_index]
