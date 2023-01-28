@@ -122,8 +122,8 @@ class CalendarGenerator:
 
     def generate_week_days(self):
         week_days = [self.weekday_data(enum) for enum in DayOfWeek]
-        # (week_start.value - 1) gives us how many times we need to shift the list
-        rotate_right(week_days, self.week_start.value - 1)
+        # week_start.value gives us how many times we need to shift the list
+        rotate_right(week_days, self.week_start.value)
         return week_days
 
     def generate_month_days(self):
