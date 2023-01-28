@@ -88,19 +88,19 @@ class CalendarGenerator:
 
         self.furigana = furigana
 
-        with open(os.path.join(path, "data", "days-of-the-month.json")) as file:
+        with open(os.path.join(path, "..", "data", "days-of-the-month.json")) as file:
             data = json.load()
             self.month_days = data["days-of-the-month"]
             self.words = data["words"]
 
-        with open(os.path.join(path, "data", "days-of-the-week.json")) as file:
+        with open(os.path.join(path, "..", "data", "days-of-the-week.json")) as file:
             data = json.load()
             self.week_days = data["days-of-the-week"]
             self.week_days_after = data["after"]
 
         self.loader = jinja2.FileSystemLoader(searchpath=path)
         self.env = jinja2.Environment(loader=self.loader)
-        self.template = self.env.get_template("month-calendar.j2")
+        self.template = self.env.get_template("calendar.j2")
 
     def weekday_data(self, weekday_enum):
         return self.week_days[weekday_enum - 1]
