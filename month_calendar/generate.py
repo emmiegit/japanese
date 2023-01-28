@@ -102,6 +102,7 @@ class CalendarGenerator:
         self.month = month or now.month
 
         self.week_start = week_start
+        self.legend = legend
         self.furigana = furigana
 
         with open(os.path.join(path, "..", "data", "days-of-the-month.json")) as file:
