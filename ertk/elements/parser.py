@@ -10,7 +10,7 @@ tokens = (
     'NUMBER',
 )
 
-literals = ['+', '/', '*', '(', ')']
+literals = ['+', '/', '*', '(', ')', '[', ']']
 
 t_ignore = ' \t\n'
 t_NAME = r'[a-zA-Z]([ ]*[\w\-]+)*'  # names, including spaces inside (e.g. "make a deal" or "fortune-telling")
@@ -43,6 +43,7 @@ def p_expression_name(p):
 def p_expression_group(p):
     '''
     expression : '(' expression ')'
+               | '[' expression ']'
     '''
 
     p[0] = p[2]
@@ -88,6 +89,7 @@ def p_list_item_name(p):
 def p_list_item_group(p):
     '''
     list_item : '(' expression ')'
+              | '[' expression ']'
     '''
 
     p[0] = p[2]
