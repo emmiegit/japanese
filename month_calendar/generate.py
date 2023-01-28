@@ -41,7 +41,11 @@ class WeekBracket:
     lists without exposing the complexity to the outside.
     """
 
-    def __init__(self):
+    def __init__(self, start_day):
+        self.days = [
+            (start_day.value + i) % 7
+            for i in range(7)
+        ]
         self.weeks = []
         self.new_row()
         self.week_index = 0
@@ -60,8 +64,8 @@ class WeekBracket:
         if week_index > len(self.weeks):
             self.new_row()
 
-    def day_of_week(self, start_day):
-        return DayOfWeek(self.day_index + start_day.value)
+    def day_of_week(self):
+        return DayOfWeek(self.days[self.day_index])
 
     def get(self):
         return self.weeks[self.week_index][self.day_index]
@@ -113,11 +117,11 @@ class CalendarGenerator:
         return week_days
 
     def generate_month_days(self):
-        weeks = WeekBracket()
+        weeks = WeekBracket(self.week_start)
 
         # Iterate until the correct day-of-week for the start of the month
         date = datetime(self.year, self.month, 1)
-        while weeks.day_of_week(self.week_start) == DayOfWeek(date.weekday()):
+        while weeks.day_of_week() == DayOfWeek(date.weekday()):
             weeks.incr_day()
 
         for day in range(1, 32):
