@@ -28,8 +28,8 @@
           {% for day in week %}
             <td class="day {{ day.class }}">
               {% if day %}
-                <span aria-describedby="tooltip-day{{ day.number }}">{{ day.arabic }}</span>
-                <span class="tooltip" role="tooltip" id="tooltip-day{{ day.number }}">{{ day.hiragana }}</span>
+                <div class="day-number">{{ day.arabic }}</div>
+                <div class="day-hiragana">{{ day.hiragana }}</div>
               {% endif %}
             </td>
           {% endfor %}
