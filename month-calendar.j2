@@ -1,0 +1,40 @@
+<html>
+<head>
+  <title>{{ year }}年 {{ month }}月 カレンダー</title>
+</head>
+<body>
+  {% include 'month-calendar-styles.j2' %}
+  {% include 'month-calendar-utils.j2' %}
+
+  <table class="calendar">
+    <caption>{{ year }}年 {{ month }}月</div>
+    <thead>
+      <tr>
+        <th>
+          {% for week_day in week_days %}
+            {{ ruby(
+              week_day.kanji + week_days_after.kanji,
+              week_day.hiragana + week_days_after.hiragana,
+              use_furigana,
+            ) }}
+          {% endfor %}
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for week in weeks %}
+        <tr class="week">
+          {% for day in week %}
+            <td class="day {{ day.class }}">
+              {% if day %}
+                <span aria-describedby="tooltip-day{{ day.number }}">{{ day.arabic }}</span>
+                <span class="tooltip" role="tooltip" id="tooltip-day{{ day.number }}">{{ day.hiragana }}</span>
+              {% endif %}
+            </td>
+          {% endfor %}
+        </tr>
+      {% endfor %}
+    </tbody>
+  </div>
+</body>
+</html>

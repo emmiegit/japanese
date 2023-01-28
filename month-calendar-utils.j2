@@ -1,0 +1,24 @@
+{% macro ruby_item(kanji, hiragana) %}
+  {{ kanji }}
+  <rp>(</rp>
+  <rt>{{ hiragana }}</rt>
+  <rp>)</rp>
+{% endmacro %}
+
+{% macro ruby(kanji, hiragana, use_furigana) %}
+  {% if use_furigana %}
+    <ruby>
+      {% if isinstance(kanji, str) %}
+        {# Entire thing is one string to ruby-ify #}
+        {{ ruby_item(kanji, hiragana) }}
+      {% else %}
+        {# List of strings, each as a separate ruby item #}
+        {% for kanji, hiragana in zip(kanji, hiragana) %}
+          {{ ruby_item(kanji, hiragana) }}
+        {% endfor %}
+      {% endif %}
+    </ruby>
+  {% else %}
+    {{ kanji }}
+  {% endif %}
+{% endmacro %}
