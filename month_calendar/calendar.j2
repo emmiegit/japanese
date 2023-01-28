@@ -12,7 +12,7 @@
     <thead>
       <tr>
         {% for week_day in week_days %}
-          <th>
+          <th title="{{ week_day.english }}">
             {{ ruby(
               [week_day.kanji] + week_days_after.kanji,
               [week_day.hiragana] + week_days_after.hiragana,
