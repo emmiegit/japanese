@@ -227,6 +227,14 @@ if __name__ == "__main__":
         help="Whether to add furigana to the days of the week."
     )
     argparser.add_argument(
+        "-L",
+        "--legend",
+        "--no-legend",
+        action="store_false",
+        dest="add_legend",
+        help="Whether to add a legend to the calendar."
+    )
+    argparser.add_argument(
         "-p",
         "--path",
         dest="path",
