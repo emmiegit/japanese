@@ -6,16 +6,10 @@
         "planet": "Planet",
         "english": "English"
     },
-    "after": [
-        {
-            "kanji": "曜",
-            "hiragana": "よう"
-        },
-        {
-            "kanji": "日",
-            "hiragana": "び"
-        }
-    ],
+    "after": {
+        "kanji": ["曜", "日"],
+        "hiragana": ["よう", "び"]
+    },
     "days-of-the-week": [
         {
             "kanji": "月",
