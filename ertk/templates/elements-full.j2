@@ -1,0 +1,12 @@
+{% from 'elements.j2' import render %}
+
+<html>
+<head>
+  <title>Element breakdown for {{ keyword }}</title>
+</head>
+<body>
+  <style>{{ style }}</style>
+  <h2>{{ keyword }}</h2>
+  <span class="element">{{ render(element) }}</span>
+</body>
+</html>
