@@ -1,15 +1,15 @@
 {% macro render(element) %}
-  {% if isinstance(element, Name) %}
+  {% if isinstance(element, types.Name) %}
     <span class="name">{{ element }}</span>
-  {% elif isinstance(element, Multiplied) %}
+  {% elif isinstance(element, types.Multiplied) %}
     <span class="multiple">{{ element.count }}&times; {{ render(element) }}</span>
-  {% elif isinstance(element, HorizontalList) %}
+  {% elif isinstance(element, types.HorizontalList) %}
     <span class="horizontal">
       {% for element in element.items %}
         {{ render(element) }} {% if not loop.last %}+{% endif %}
       {% endfor %}
     </span>
-  {% elif type == 'vertical' %}
+  {% elif isinstance(element, types.VerticalList) %}
     <span class="vertical">
       {% for element in element.items %}
         {% if loop.first %}
