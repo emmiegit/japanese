@@ -2,11 +2,28 @@
 
 <html>
 <head>
-  <title>Element breakdown for {{ keyword }}</title>
+  <title>Element breakdown for "{{ keyword }}"</title>
 </head>
 <body>
   <style>{{ style }}</style>
-  <h2>{{ keyword }}</h2>
-  <span class="element">{{ render(element) }}</span>
+  <style>
+    table, td, tr {
+      border: thin solid gray;
+    }
+
+    td {
+      padding: 0.4em;
+    }
+  </style>
+  <table>
+    <tr>
+      <th>{{ keyword }}</th>
+    </tr>
+    <tr>
+      <td>
+        <span class="element">{{ render(element) }}</span>
+      </td>
+    </tr>
+  </table>
 </body>
 </html>
