@@ -10,11 +10,12 @@ import elements
 
 if __name__ == "__main__":
     if len(sys.argv) < 3:
-        print(f"Usage: {sys.argv[0]} <keyword> <syntax>")
+        print(f"Usage: {sys.argv[0]} <keyword> <syntax> [output-path]")
         sys.exit(1)
 
     keyword = sys.argv[1]
     expression = sys.argv[2]
+    output_path = sys.argv[3] if len(sys.argv) > 3 else None
     element = elements.parser.parse(expression)
 
     with open("static/style.css") as file:
@@ -30,3 +31,9 @@ if __name__ == "__main__":
         "style": style,
         "element": element,
     })
+
+    if output_path is None:
+        print(html)
+    else:
+        with open(output_path, "w") as file:
+            file.write(html)
