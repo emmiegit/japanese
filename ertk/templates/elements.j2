@@ -2,7 +2,7 @@
   {% if isinstance(element, types.Name) %}
     <span class="name">{{ element }}</span>
   {% elif isinstance(element, types.Multiplied) %}
-    <span class="multiple">{{ element.count }}&times; {{ render(element) }}</span>
+    <span class="multiple">{{ element.count }}&times; {{ render(element.expression) }}</span>
   {% elif isinstance(element, types.HorizontalList) %}
     <span class="horizontal">
       {% for element in element.items %}
