@@ -7,9 +7,11 @@ import gzip
 import sys
 import os
 from collections import namedtuple
+from functools import cache
 
 Kanji = namedtuple("Kanji", ("number", "kanji", "keyword", "strokes", "lesson"))
 
+@cache
 def read_kanji(limit=None):
     limit = limit or 100000
     current_directory = os.path.dirname(sys.argv[0])
@@ -33,6 +35,7 @@ def read_kanji(limit=None):
 
     return kanji
 
+@cache
 def read_newspaper_kanji():
     current_directory = os.path.dirname(sys.argv[0])
     newspaper_path = os.path.join(current_directory, "data", "kanji-frequency-in-newspapers.txt.gz")
