@@ -85,6 +85,9 @@ def read_kanji_index(*, limit=None, version=6):
         index[entry.keyword.casefold()] = entry
         index[entry.kanji] = entry
 
+        if entry.alt_kanji is not None:
+            index[entry.alt_kanji] = entry
+
     return index
 
 @cache
