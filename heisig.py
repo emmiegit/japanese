@@ -9,7 +9,7 @@ import os
 from collections import namedtuple
 from functools import cache
 
-Kanji = namedtuple("Kanji", ("kanji", "number_v4", "number_v6", "strokes", "elements", "keyword", "on_yomi", "kun_yomi", "hochanh_url"))
+Kanji = namedtuple("Kanji", ("kanji", "alt_kanji", "number_v4", "number_v6", "strokes", "elements", "keyword", "on_yomi", "kun_yomi", "hochanh_url"))
 
 class UniqueDict(dict):
     """
@@ -41,14 +41,24 @@ def read_kanji(*, limit=None, version=6):
     kanji = []
     for entry in heisig_data:
         if entry["heisig"][heisig_number_key] < limit:
+            # Process some fields
+            keyword = entry["elements"].split(",")[0].strip()
+
+            if "・" in entry["kanji"]:
+                kanji, alt_kanji = entry["kanji"].split("・")
+            else:
+                kanji, alt_kanji = entry["kanji"], None
+
+            # Build and append
             kanji.append(
                 Kanji(
                     kanji=entry["kanji"],
+                    alt_kanji=entry["alt_kanji"],
                     number_v4=entry["heisig"]["v4"],
                     number_v6=entry["heisig"]["v6"],
                     strokes=entry["strokes"],
                     elements=entry["elements"],
-                    keyword=entry["elements"].split(",")[0].strip(),
+                    keyword=keyword,
                     on_yomi=entry["on-yomi"],
                     kun_yomi=entry["kun-yomi"],
                     hochanh_url=entry["hochanh-url"],
