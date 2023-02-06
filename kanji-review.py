@@ -24,4 +24,4 @@ if __name__ == "__main__":
 
     for k in kanji:
         input(f"{k.kanji} ? ")
-        print(f"{k.keyword} [{k.strokes}] (#{k.number}, lesson {k.lesson})\n")
+        print(f"{k.keyword} [{k.strokes}] (#{k.number_v6})\n")
