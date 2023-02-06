@@ -1,0 +1,18 @@
+# This file is not structured (yet), but eventually will become a
+# TOML or JSON or something file which describes all of the ERTK
+# notes in a format that can be automatically read from.
+#
+# Because I have a lot of notes, I am first going through and writing
+# down my notes for various characters, and then after I see what
+# requirements I have, I will then develop a format which satisfies them.
+
+# I studied using the 2001 edition of Remembering the Kanji, but new
+# students should use the 2011 edition. Unfortunately the Anki deck I
+# was using was for the 2011 edition, so I did not benefit from the book
+# on the "missing" characters.
+#
+# I have adapted my notes for the 2011 edition, but this is relevant context
+# in case there are issues in my serialization that were not issues when
+# I was originally going through this studying myself.
+
+
