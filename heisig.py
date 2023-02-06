@@ -41,6 +41,11 @@ def read_kanji(*, limit=None, version=6):
     kanji_list = []
     for entry in heisig_data:
         if entry["heisig"][heisig_number_key] < limit:
+            if entry["elements"] is None:
+                # TODO! fix me!
+                print(entry)
+                continue
+
             # Process some fields
             keyword = entry["elements"].split(",")[0].strip()
 
