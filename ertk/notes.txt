@@ -6,8 +6,8 @@
 # down my notes for various characters, and then after I see what
 # requirements I have, I will then develop a format which satisfies them.
 
-# I studied using the 2001 edition of Remembering the Kanji, but new
-# students should use the 2011 edition. Unfortunately the Anki deck I
+# I studied using the 2001 edition (v4) of Remembering the Kanji, but new
+# students should use the 2011 edition (v6). Unfortunately the Anki deck I
 # was using was for the 2011 edition, so I did not benefit from the book
 # on the "missing" characters.
 #
@@ -15,4 +15,10 @@
 # in case there are issues in my serialization that were not issues when
 # I was originally going through this studying myself.
 
+# I assume the student will proceed into studying RTK 3. However even
+# if you only study RTK 1, this guide should be helpful.
+#
+# I also assume the student is able to read using kana. I am not saying
+# that the student must be able to read kana perfectly, just that they
+# are familar with the basics and in the process of getting off of rōmaji.
 
