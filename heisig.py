@@ -48,7 +48,7 @@ def read_kanji(*, limit=None, version=6):
                     number_v6=entry["heisig"]["v6"],
                     strokes=entry["strokes"],
                     elements=entry["elements"],
-                    keyword=entry["elements"].split(",")[0].trim(),
+                    keyword=entry["elements"].split(",")[0].strip(),
                     on_yomi=entry["on-yomi"],
                     kun_yomi=entry["kun-yomi"],
                     hochanh_url=entry["hochanh-url"],
