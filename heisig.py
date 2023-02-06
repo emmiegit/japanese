@@ -52,8 +52,8 @@ def read_kanji(*, limit=None, version=6):
             # Build and append
             kanji_list.append(
                 Kanji(
-                    kanji=entry["kanji"],
-                    alt_kanji=entry["alt_kanji"],
+                    kanji=kanji,
+                    alt_kanji=alt_kanji,
                     number_v4=entry["heisig"]["v4"],
                     number_v6=entry["heisig"]["v6"],
                     strokes=entry["strokes"],
