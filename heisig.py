@@ -23,7 +23,7 @@ class UniqueDict(dict):
         super().__setitem__(key, value)
 
 @cache
-def read_kanji(limit=None, version=6):
+def read_kanji(*, limit=None, version=6):
     limit = limit or 100000
     current_directory = os.path.dirname(sys.argv[0])
     heisig_path = os.path.join(current_directory, "data", "heisig.json.gz")
@@ -58,8 +58,8 @@ def read_kanji(limit=None, version=6):
     return kanji
 
 @cache
-def read_kanji_index(limit=None, version=6):
-    kanji = read_kanji(limit)
+def read_kanji_index(*, limit=None, version=6):
+    kanji = read_kanji(limit=limit, version=version)
     index = UniqueDict()
 
     if version == 4:
