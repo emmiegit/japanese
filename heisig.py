@@ -11,16 +11,23 @@ from functools import cache
 
 Kanji = namedtuple("Kanji", ("kanji", "alt_kanji", "number_v4", "number_v6", "strokes", "elements", "keyword", "on_yomi", "kun_yomi", "hochanh_url"))
 
-class UniqueDict(dict):
+class KanjiIndex(dict):
     """
-    Wrapper around the regular dict object, except it errors if a key would be overwritten.
+    Wrapper around the regular dict object, adapted as a kanji index.
+
+    It errors if a key would be overwritten, except for Heisig numbers (integers)
+    which are appended to a list.
     """
 
     def __setitem__(self, key, value):
         if key in self:
-            raise KeyError(key)
-
-        super().__setitem__(key, value)
+            if isinstance(key, int):
+                old_value = self[key]
+                super().__setitem__(key, [old_value, value])
+            else:
+                raise KeyError(key)
+        else:
+            super().__setitem__(key, value)
 
 @cache
 def read_kanji(*, limit=None, version=6):
@@ -75,7 +82,7 @@ def read_kanji(*, limit=None, version=6):
 @cache
 def read_kanji_index(*, limit=None, version=6):
     kanji = read_kanji(limit=limit, version=version)
-    index = UniqueDict()
+    index = KanjiIndex()
 
     if version == 4:
         heisig_number_key = "number_v4"
