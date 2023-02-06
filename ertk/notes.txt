@@ -24,6 +24,7 @@
 
 # Things to be careful of with RTK:
 # - keywords are not meanings, they are keywords
+# - RTK uses a serif font for kanji, which like the lowercase letter "a" in many fonts, is not how the character is actually written. reference a handwritten font for each character (which this guide does)
 
 num = 1
 kw = "one"
