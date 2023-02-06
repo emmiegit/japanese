@@ -11,6 +11,17 @@ from functools import cache
 
 Kanji = namedtuple("Kanji", ("kanji", "number_v4", "number_v6", "strokes", "elements", "keyword", "on_yomi", "kun_yomi", "hochanh_url"))
 
+class UniqueDict(dict):
+    """
+    Wrapper around the regular dict object, except it errors if a key would be overwritten.
+    """
+
+    def __setitem__(self, key, value):
+        if key in self:
+            raise KeyError(key)
+
+        super().__setitem__(key, value)
+
 @cache
 def read_kanji(limit=None):
     limit = limit or 100000
@@ -42,7 +53,7 @@ def read_kanji(limit=None):
 @cache
 def read_kanji_index(limit=None, version=6):
     kanji = read_kanji(limit)
-    index = {}
+    index = UniqueDict()
 
     if version == 4:
         heisig_number_key = "number_v4"
