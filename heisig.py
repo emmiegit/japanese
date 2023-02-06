@@ -9,7 +9,7 @@ import os
 from collections import namedtuple
 from functools import cache
 
-Kanji = namedtuple("Kanji", ("number", "kanji", "keyword", "strokes", "lesson"))
+Kanji = namedtuple("Kanji", ("kanji", "number_v4", "number_v6", "strokes", "elements", "keyword", "on_yomi", "kun_yomi", "hochanh_url"))
 
 @cache
 def read_kanji(limit=None):
@@ -25,11 +25,15 @@ def read_kanji(limit=None):
         if entry["number"] < limit:
             kanji.append(
                 Kanji(
-                    number=entry["number"],
                     kanji=entry["kanji"],
-                    keyword=entry["keyword"],
+                    number_v4=entry["heisig"]["v4"],
+                    number_v6=entry["heisig"]["v6"],
                     strokes=entry["strokes"],
-                    lesson=entry["lesson"],
+                    elements=entry["elements"],
+                    keyword=entry["elements"].split(",")[0].trim(),
+                    on_yomi=entry["on-yomi"],
+                    kun_yomi=entry["kun-yomi"],
+                    hochanh_url=entry["hochanh-url"],
                 )
             )
 
