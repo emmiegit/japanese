@@ -4,6 +4,21 @@ import sys
 
 from heisig import read_kanji_index
 
+
+def format_result(result):
+    if result is None:
+        return "(not found)"
+
+    if isinstance(result, list):
+        return ", ".join(map(format_result, result))
+
+    if result.alt_kanji is None:
+        alternate = ""
+    else:
+        alternate = f", alt: {result.alt_kanji}"
+
+    return f"{result.kanji} ({result.keyword}, {result.strokes}画{alternate})"
+
 if __name__ == "__main__":
     if len(sys.argv) < 2:
         print(f"Usage: {sys.argv[0]} [query...]")
@@ -21,9 +36,9 @@ if __name__ == "__main__":
 
             result = index[query]
         except KeyError:
-            result = "(not found)"
+            result = None
             exit_code = 1
 
-        print(f"{original_query}: {result}")
+        print(f"{original_query}: {format_result(result)}")
 
     sys.exit(exit_code)
