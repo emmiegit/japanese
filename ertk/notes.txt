@@ -6,7 +6,7 @@
 # down my notes for various characters, and then after I see what
 # requirements I have, I will then develop a format which satisfies them.
 
-# I studied using the 2001 edition (v4) of Remembering the Kanji, but new
+# I studied using the 2001 edition of Remembering the Kanji, but new
 # students should use the 2011 edition (v6). Unfortunately the Anki deck I
 # was using was for the 2011 edition, so I did not benefit from the book
 # on the "missing" characters.
@@ -22,9 +22,25 @@
 # that the student must be able to read kana perfectly, just that they
 # are familar with the basics and in the process of getting off of rōmaji.
 
+# Some characters don't have a story because my story is personal to me,
+# not in the sense of being private but that it references friends or
+# personal events in my life that are not universal, and thus not helpful
+# as a story. [these are tagged 'private']
+
 # Things to be careful of with RTK:
 # - keywords are not meanings, they are keywords
 # - RTK uses a serif font for kanji, which like the lowercase letter "a" in many fonts, is not how the character is actually written. reference a handwritten font for each character (which this guide does)
+# - explain briefly about han unification
+
+# vconf - visually confusable
+# sconf - semantically confusable
+# pnum, pkw - primitive number / keyword. number is for order in the book / this guide
+# rkw - replacement keyword
+# story - my story (or replacement story)
+# words - example words
+# for (primitive only) - which full kanji this primitive takes its meaning from
+
+lesson = 1
 
 num = 1
 kw = "one"
@@ -55,10 +71,387 @@ comp = ["atom"]
 num = 7
 kw = "seven"
 tags = ["root"]
-prim = ["cut" (89)]
-confusable = [476] # spoon
+prim = ["cut (89)"]
+vconf = [476] # spoon
 
 num = 8
 kw = "eight"
 tags = ["root"]
-confusable = [
+vconf = [1023, 842] # 人, 入
+
+num = 9
+kw = "nine"
+tags = ["root"]
+prim = ["nine", "baseball team", "baseball"]
+vconf = [922] # strength
+
+num = 10
+kw = "ten"
+tags = ["root"]
+prim = ["ten", "needle (292)"]
+
+num = 11
+kw = "mouth"
+tags = ["root"]
+
+num = 12
+kw = "day"
+tags = ["root"]
+prim = ["day", "sun", "tongue wagging in the mouth (620)"]
+vconf = [620]
+
+num = 13
+kw = "month"
+tags = ["root"]
+prim = ["month", "moon", "flesh (1098)", "part of the body (1098)"]
+primform = ["⺼"]
+
+num = 14
+kw = "rice field"
+tags = ["root"]
+prim = ["rice field", "brains"]
+sconf = [2084] # brain
+
+num = 15
+kw = "eye"
+tags = ["root"]
+primform = ["罒","⺫"]
+
+lesson = 2
+
+num = 16
+kw = "old"
+comp = "ten / mouth"
+tags = ["pictograph"] # incidental pictograph
+
+num = 17
+kw = "I"
+comp = "five / mouth"
+
+num = 18
+kw = "risk"
+comp = "sun / eye"
+
+num = 19
+kw = "companion"
+comp = "flesh + flesh"
+
+num = 20
+kw = "bright"
+comp = "sun + moon"
+
+num = 21
+kw = "chant"
+comp = "mouth + (mouth with wagging tongue / mouth with wagging tongue)"
+
+num = 22
+kw = "sparkle"
+comp = "3x sun"
+
+num = 23
+kw = "goods"
+comp = 3x mouth"
+tags = ["pictograph"]
+
+num = 24
+kw = "spine"
+comp = "mouth / drop / mouth"
+tags = ["pictograph"]
+
+num = 25
+kw = "prosperous"
+comp = "sun / sun"
+
+num = 26
+kw = "early"
+comp = "sun / needle"
+tags = ["pictograph"]
+prim = ["early", "sunflower"]
+usage = "As a word, this can also mean "fast", in the sense that you got to your destination earlier than expected."
+
+num = 27
+kw = "rising sun"
+comp = "baseball + sun"
+
+num = 28
+kw = "generation"
+tags = ["root"]
+
+num = 29
+kw = "stomach"
+comp = "brain / flesh"
+
+num = 30
+kw = "nightbreak"
+comp = "sun / floor"
+
+num = 31
+kw = "gall bladder"
+comp = "part of body + nightbreak"
+
+num = 32
+kw = "span"
+comp = "ceiling / sun / floor"
+
+num = 33
+kw = "concave"
+tags = ["root"]
+
+num = 34
+kw = "convex"
+tags = ["root"]
+
+pnum = 34.1
+pkw = "walking stick"
+char = "丨"
+
+pnum = 34.2
+pkw = "a drop of"
+char = ["丿", "丶"]
+
+num = 35
+kw = "olden times"
+comp = "walking stick + day"
+
+num = 36
+kw = "oneself"
+comp = "drop / eye"
+prim = ["oneself", "nose / nostrils (733)"]
+
+num = 37
+kw = "white"
+comp = "drop / sun"
+prim = ["white", "white bird / dove (2091)"]
+
+num = 38
+kw = "hundred"
+comp = "one / white"
+
+num = 39
+kw = "in"
+rkw = "middle"
+comp = "mouth / walking stick"
+tags = ["root", "pictograph"]
+
+num = 40
+kw = "thousand"
+comp = "drop / ten"
+
+num = 41
+kw = "tongue"
+comp = "thousand / mouth"
+
+num = 42
+kw = "measuring box"
+tags = ["root"]
+
+num = 43
+kw = "rise up"
+comp = "sun / measuring box"
+
+num = 44
+kw = "round"
+comp = "nine + drop"
+prim = ["round", "fat man"]
+
+num = 45
+kw = "measurement"
+comp = "ten (with hook) / drop"
+tags = ["root"]
+prim = ["glue"]
+
+num = 46
+kw = "elbow"
+comp = "part of body + glue"
+# first divergence from 2011 edition
+
+num = 47
+kw = "specialty"
+comp = "ten / rice field / glue"
+
+num = 48
+kw = "Dr."
+comp = "needle + (drop / specialty)"
+prim = ["尃" "acupuncturist"]
+
+pnum = 48.1
+pkw = "divining rod"
+pkanji = "卜"
+prim = ["magic wand"] # 'prim' in a primitive entry means 'other meanings'
+
+num = 49
+kw = "fortune-telling"
+comp = "divining rod / mouth"
+
+num = 50
+kw = "above"
+comp = "magic wand / floor"
+tags = ["ideogram"]
+
+num = 51
+kw = "below"
+comp = "ceiling / magic wand"
+tags = ["ideogram"]
+
+num = 52
+kw = "eminent"
+comp = "magic wand / sunflower"
+
+pnum = 52.1
+pkw = "mist"
+comp = "needle / sunflower"
+char = "龺" # 𠦝 non-radical form
+
+num = 53
+kw = "morning"
+comp = "mist + moon"
+
+num = 53
+kw = "derision"
+comp = "mouth + morning"
+
+lesson = 4
+
+pnum = 53.1
+pkw = "animal legs"
+
+pnum = 53.2
+pkw = "human legs"
+pkanji = "儿"
+usage = "You can also think of this character as meaning "human action", the metaphorical sense of human legs in which a human makes use of a thing."
+
+pnum = 53.3
+pkw = "wind (563)"
+prim = ["wind", "weather vane", "empty table"]
+notes = "This is actually the 'table' radical, a meaning we will use for a handful of characters."
+
+pnum = 53.4
+pkw = "bound up"
+notes = "This is actually a modified form of the 'sword' radical, but because of its differing stroke order Heisig wisely decided to treat this as a separate primitive altogether."
+
+pnum = 53.4
+pkw = "horns"
+
+num = 55
+kw = "only"
+comp = "mouth / animal legs"
+
+num = 56
+kw = "shellfish"
+comp = "eye / animal legs"
+prim = ["shellfish", "shells", "money"]
+usage = "For some reason Heisig does not note until a fair bit later that this character, _as a radical only_, has the meaning of "money". Remember, in ancient societies certain kinds of shells were used as a form of currency, which is where this meaning comes from. Do _not_ confuse this with modern Japanese, where this character is not used in relation to the concept of money at all."
+
+num = 57
+kw = "pop song"
+comp = "mouth + shellfish"
+
+num = 58
+kw = "upright"
+comp = "magic wand / shellfish"
+
+num = 59
+kw = "employee"
+comp = "mouth / shellfish"
+usage = "This character could be thought of as meaning "member", as it has a more expansive meaning than simply the employee of a company, instead encompassing many situations where you are a member of a club, an organization, etc."
+words = ["議員", "member of a legislative assembly / Congress / Parliament"]
+
+num = 60
+kw = "post a bill"
+rkw = "paste"
+comp = "shellfish + fortune teller"
+notes = "As this character is used in software to mean the 'paste' in "copy and paste", you can change the keyword to "paste" if you wish."
+
+num = 61
+kw = "see"
+comp = "eye / human legs"
+story = "If you think of __human legs__ in the sense of "human action" as I described previously, the action of **see**ing with your __eyes__ becomes very obvious."
+
+num = 62
+kw = "newborn babe"
+comp = "olden times / human legs"
+notes = "This character is a simplification of 兒, which for some reason has "mortar" at the top."
+
+num = 63
+kw = "beginning"
+comp = "two / human legs"
+
+num = 64
+kw = "page"
+comp = "one / drop / shellfish"
+prim = ["page", "head (1549)"]
+
+num = 65
+kw = "stubborn"
+comp = "beginning + page"
+
+num = 66
+kw = "mediocre"
+comp = "wind / drop"
+usage = "In actuality, this character is more similar to the concept of being average or typical than being mediocre, which suggests being _worse_ than normal."
+
+num = 67
+kw = "defeat"
+comp = "bound up / shellfish"
+story = "Have you heard what they say about crabs in a bucket? They aren't quite __shellfish__ but close enough: they fight among themselves to prevent any of them from escaping, being all __bound up__ in conflict, which leads to the __defeat__ of them all since they are then taken by the fisherman to the market to be sold and eaten."
+
+num = 68
+kw = "ten thousand"
+tags = ["root"]
+
+num = 69
+kw = "phrase"
+comp = "bound up / mouth"
+
+num = 70
+kw = "texture"
+comp = "part of the body + wind"
+usage = "Imagine strongly Heisig's story of the __wind__ brushing across your skin, since this character is most commonly used to refer to that __part of the body__. However we cannot use the keyword _skin_ as that is used in [[frame 2147]]."
+
+num = 71
+kw = "decameron"
+comp = "bound up / day"
+
+num = 72
+kw = "ladle"
+comp = "bound up / drop"
+
+num = 73
+kw = "bull's eye"
+comp = "white bird + ladle"
+
+num = 74
+kw = "neck"
+comp = ["horns / nose", "horns / drop / eye"]
+story = "I imagined this character rather differently, instead seeing a tall giraffe, with __horns__ on its head. Giraffes have long **necks** of course, so we rely on the "tallest" primitive we know so far, __eye__, with a __drop__ on top for extra height."
+
+lesson = 5
+
+num = 75
+kw = "fish guts"
+tags = ["root"]
+prim = ["fishhook", "hook"]
+char = ["乚"]
+notes = """Along with [[one]], these are the only two characters with one stroke. All the others (e.g. drop, walking stick) are primitives and not full characters.
+
+Due to this character's unusual shape, when used in radical indexes or kanji dictionaries, it is often used as a "miscellaneous" category. This can be a confusing convention if the index does not explain this."""
+
+num = 76
+kw = "riot"
+comp = "tongue + fishhook"
+usage = "This character is used in several words, one of which is "riot", but also others involving disorderliness or chaos."
+
+num = 77
+kw = "straightaway"
+comp = "needle / eye / fishhook"
+v_confusable = [79] # true
+notes = "It is very important you do not confuse this character with [[true]], which comes a few frames after this. This is further complicated by the fact that this and 真 are used together in some common words."
+
+pnum = 77.1
+pkw = "tool"
+comp = "floor / animal legs"
+for = 78 # tool
+
+num = 78
+kw = "tool"
+comp = "eye / tool"
