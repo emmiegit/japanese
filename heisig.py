@@ -40,6 +40,26 @@ def read_kanji(limit=None):
     return kanji
 
 @cache
+def read_kanji_index(limit=None, version=6):
+    kanji = read_kanji(limit)
+    index = {}
+
+    if version == 4:
+        heisig_number_key = "number_v4"
+    elif version == 6:
+        heisig_number_key = "number_v6"
+    else:
+        raise ValueError(f"No stored Heisig number for version {version:r}")
+
+    for entry in kanji:
+        number = getattr(entry, heisig_number_key)
+        index[number] = entry
+        index[entry.keyword] = entry
+        index[entry.kanji] = entry
+
+    return index
+
+@cache
 def read_newspaper_kanji():
     current_directory = os.path.dirname(sys.argv[0])
     newspaper_path = os.path.join(current_directory, "data", "kanji-frequency-in-newspapers.txt.gz")
