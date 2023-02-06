@@ -65,7 +65,7 @@ def read_kanji_index(limit=None, version=6):
     for entry in kanji:
         number = getattr(entry, heisig_number_key)
         index[number] = entry
-        index[entry.keyword] = entry
+        index[entry.keyword.casefold()] = entry
         index[entry.kanji] = entry
 
     return index
