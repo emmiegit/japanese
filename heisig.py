@@ -23,17 +23,24 @@ class UniqueDict(dict):
         super().__setitem__(key, value)
 
 @cache
-def read_kanji(limit=None):
+def read_kanji(limit=None, version=6):
     limit = limit or 100000
     current_directory = os.path.dirname(sys.argv[0])
     heisig_path = os.path.join(current_directory, "data", "heisig.json.gz")
+
+    if version == 4:
+        heisig_number_key = "v4"
+    elif version == 6:
+        heisig_number_key = "v6"
+    else:
+        raise ValueError(f"No stored Heisig number for version {version:r}")
 
     with gzip.open(heisig_path, "rt") as file:
         heisig_data = json.load(file)
 
     kanji = []
     for entry in heisig_data:
-        if entry["number"] < limit:
+        if entry["heisig"][heisig_number_key] < limit:
             kanji.append(
                 Kanji(
                     kanji=entry["kanji"],
