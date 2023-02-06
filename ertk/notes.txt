@@ -22,6 +22,9 @@
 # that the student must be able to read kana perfectly, just that they
 # are familar with the basics and in the process of getting off of rōmaji.
 
+# Things to be careful of with RTK:
+# - keywords are not meanings, they are keywords
+
 num = 1
 kw = "one"
 prim = ["one", "ceiling", "floor"]
