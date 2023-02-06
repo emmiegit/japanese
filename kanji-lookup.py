@@ -5,6 +5,10 @@ import sys
 from heisig import read_kanji_index
 
 if __name__ == "__main__":
+    if len(sys.argv) < 2:
+        print(f"Usage: {sys.argv[0]} [query...]")
+        sys.exit(1)
+
     index = read_kanji_index()
     exit_code = 0
 
