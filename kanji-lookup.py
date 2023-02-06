@@ -17,7 +17,7 @@ def format_result(result):
     else:
         alternate = f", alt: {result.alt_kanji}"
 
-    return f"{result.kanji} ({result.keyword}, {result.strokes}画{alternate})"
+    return f"{result.kanji} (\"{result.keyword}\", {result.strokes}画{alternate})"
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
