@@ -38,7 +38,7 @@ def read_kanji(*, limit=None, version=6):
     with gzip.open(heisig_path, "rt") as file:
         heisig_data = json.load(file)
 
-    kanji = []
+    kanji_list = []
     for entry in heisig_data:
         if entry["heisig"][heisig_number_key] < limit:
             # Process some fields
@@ -50,7 +50,7 @@ def read_kanji(*, limit=None, version=6):
                 kanji, alt_kanji = entry["kanji"], None
 
             # Build and append
-            kanji.append(
+            kanji_list.append(
                 Kanji(
                     kanji=entry["kanji"],
                     alt_kanji=entry["alt_kanji"],
@@ -65,7 +65,7 @@ def read_kanji(*, limit=None, version=6):
                 )
             )
 
-    return kanji
+    return kanji_list
 
 @cache
 def read_kanji_index(*, limit=None, version=6):
