@@ -4,6 +4,7 @@
 Converts between Arabic numerals and Chinese numerals.
 
 Not intended to be exhaustive, just a simple script for basic enumeration.
+If you need to actually use this for something, find a proper library.
 """
 
 DIGITS = [
