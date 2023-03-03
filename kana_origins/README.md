@@ -31,10 +31,10 @@ This will generate a new `README.md` file from the CSV data files and Jinja temp
 | き | 機 | <ruby>掃<rp>(</rp><rt>そう</rt><rp>)</rp>除<rp>(</rp><rt>じ</rt><rp>)</rp>機<rp>(</rp><rt>き</rt><rp>)</rp></ruby> | vacuum cleaner |
 | く | 久 |  |  |
 | け | 計 | <ruby>計<rp>(</rp><rt>けい</rt><rp>)</rp>画<rp>(</rp><rt>かく</rt><rp>)</rp></ruby> | plot, plan |
-| こ | 己 |  |  |
-| さ | 左 |  |  |
+| こ | 己 | <ruby>自<rp>(</rp><rt>じ</rt><rp>)</rp>己<rp>(</rp><rt>こ</rt><rp>)</rp></ruby> | oneself |
+| さ | 左 | <ruby>左<rp>(</rp><rt>さ</rt><rp>)</rp>翼<rp>(</rp><rt>よく</rt><rp>)</rp></ruby> | left-wing politics |
 | し | 之 |  |  |
-| す | 寸 |  |  |
+| す | 寸 | <ruby>寸<rp>(</rp><rt>すん</rt><rp>)</rp>前<rp>(</rp><rt>ぜん</rt><rp>)</rp></ruby> | just before, on the verge of |
 | せ | 世 | <ruby>世<rp>(</rp><rt>せ</rt><rp>)</rp>界<rp>(</rp><rt>かい</rt><rp>)</rp></ruby> | world |
 | そ | 曽 | <ruby>味<rp>(</rp><rt>み</rt><rp>)</rp>噌<rp>(</rp><rt>そ</rt><rp>)</rp></ruby> | miso |
 | た | 太 | <ruby>太<rp>(</rp><rt>たい</rt><rp>)</rp>陽<rp>(</rp><rt>よう</rt><rp>)</rp></ruby> | Sun |
@@ -58,7 +58,7 @@ This will generate a new `README.md` file from the CSV data files and Jinja temp
 | め | 女 | <ruby>女<rp>(</rp><rt>め</rt><rp>)</rp>神<rp>(</rp><rt>がみ</rt><rp>)</rp></ruby> | goddess, female diety |
 | も | 毛 | <ruby>毛<rp>(</rp><rt>もう</rt><rp>)</rp>布<rp>(</rp><rt>ふ</rt><rp>)</rp></ruby> | blanket |
 | ら | 良 | <ruby>奈<rp>(</rp><rt>な</rt><rp>)</rp>良<rp>(</rp><rt>ら</rt><rp>)</rp></ruby> | Nara (prefecture and city) |
-| り | 利 |  |  |
+| り | 利 | <ruby>便<rp>(</rp><rt>べん</rt><rp>)</rp>利<rp>(</rp><rt>り</rt><rp>)</rp></ruby> | convenient |
 | る | 留 |  |  |
 | れ | 礼 |  |  |
 | ろ | 呂 | <ruby>お<rp>(</rp><rt></rt><rp>)</rp>風<rp>(</rp><rt>ふ</rt><rp>)</rp>呂<rp>(</rp><rt>ろ</rt><rp>)</rp></ruby> | bath |
@@ -86,7 +86,7 @@ This will generate a new `README.md` file from the CSV data files and Jinja temp
 | キ | 機 | <ruby>掃<rp>(</rp><rt>そう</rt><rp>)</rp>除<rp>(</rp><rt>じ</rt><rp>)</rp>機<rp>(</rp><rt>き</rt><rp>)</rp></ruby> | vacuum cleaner |
 | ク | 久 |  |  |
 | ケ | 介 |  |  |
-| コ | 己 |  |  |
+| コ | 己 | <ruby>自<rp>(</rp><rt>じ</rt><rp>)</rp>己<rp>(</rp><rt>こ</rt><rp>)</rp></ruby> | oneself |
 | サ | 散 | <ruby>散<rp>(</rp><rt>さん</rt><rp>)</rp>歩<rp>(</rp><rt>ぽ</rt><rp>)</rp></ruby> | walk, stroll |
 | シ | 之 |  |  |
 | ス | 須 |  |  |
@@ -116,7 +116,7 @@ This will generate a new `README.md` file from the CSV data files and Jinja temp
 | ユ | 由 | <ruby>自<rp>(</rp><rt>じ</rt><rp>)</rp>由<rp>(</rp><rt>ゆう</rt><rp>)</rp></ruby> | freedom, liberty |
 | ヨ | 與 |  |  |
 | ラ | 良 | <ruby>奈<rp>(</rp><rt>な</rt><rp>)</rp>良<rp>(</rp><rt>ら</rt><rp>)</rp></ruby> | Nara (prefecture and city) |
-| リ | 利 |  |  |
+| リ | 利 | <ruby>便<rp>(</rp><rt>べん</rt><rp>)</rp>利<rp>(</rp><rt>り</rt><rp>)</rp></ruby> | convenient |
 | ル | 流 |  |  |
 | レ | 礼 |  |  |
 | ロ | 呂 | <ruby>お<rp>(</rp><rt></rt><rp>)</rp>風<rp>(</rp><rt>ふ</rt><rp>)</rp>呂<rp>(</rp><rt>ろ</rt><rp>)</rp></ruby> | bath |
