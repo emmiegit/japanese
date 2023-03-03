@@ -60,7 +60,7 @@ This will generate a new `README.md` file from the CSV data files and Jinja temp
 | ら | 良 | <ruby>奈<rp>(</rp><rt>な</rt><rp>)</rp>良<rp>(</rp><rt>ら</rt><rp>)</rp></ruby> | Nara (prefecture and city) |
 | り | 利 | <ruby>便<rp>(</rp><rt>べん</rt><rp>)</rp>利<rp>(</rp><rt>り</rt><rp>)</rp></ruby> | convenient |
 | る | 留 |  |  |
-| れ | 礼 |  |  |
+| れ | 礼 | <ruby>礼<rp>(</rp><rt>れい</rt><rp>)</rp></ruby> | thanks, gratitude |
 | ろ | 呂 | <ruby>お<rp>(</rp><rt></rt><rp>)</rp>風<rp>(</rp><rt>ふ</rt><rp>)</rp>呂<rp>(</rp><rt>ろ</rt><rp>)</rp></ruby> | bath |
 | や | 也 |  |  |
 | ゆ | 由 | <ruby>自<rp>(</rp><rt>じ</rt><rp>)</rp>由<rp>(</rp><rt>ゆう</rt><rp>)</rp></ruby> | freedom, liberty |
@@ -118,7 +118,7 @@ This will generate a new `README.md` file from the CSV data files and Jinja temp
 | ラ | 良 | <ruby>奈<rp>(</rp><rt>な</rt><rp>)</rp>良<rp>(</rp><rt>ら</rt><rp>)</rp></ruby> | Nara (prefecture and city) |
 | リ | 利 | <ruby>便<rp>(</rp><rt>べん</rt><rp>)</rp>利<rp>(</rp><rt>り</rt><rp>)</rp></ruby> | convenient |
 | ル | 流 |  |  |
-| レ | 礼 |  |  |
+| レ | 礼 | <ruby>礼<rp>(</rp><rt>れい</rt><rp>)</rp></ruby> | thanks, gratitude |
 | ロ | 呂 | <ruby>お<rp>(</rp><rt></rt><rp>)</rp>風<rp>(</rp><rt>ふ</rt><rp>)</rp>呂<rp>(</rp><rt>ろ</rt><rp>)</rp></ruby> | bath |
 | ワ | 和 | <ruby>和<rp>(</rp><rt>わ</rt><rp>)</rp>風<rp>(</rp><rt>ふう</rt><rp>)</rp></ruby> | Japanese-style |
 | ン | 尓 |  |  |
