@@ -5,27 +5,6 @@ import sys
 
 import jinja2
 
-DOCUMENT_TEMPLATE = jinja2.Template("""\
-## ひらがな
-
-[Origin Chart](https://commons.wikimedia.org/wiki/File:Hiragana_origin.svg)
-
-{{ tables[0] }}
-
-## カタカナ
-
-[Origin Chart](https://commons.wikimedia.org/wiki/File:Katakana_origine.svg)
-
-{{ tables[1] }}
-""")
-
-MARKDOWN_TABLE_HEAD = """\
-| Kana | Kanji | Example Word | Definition |
-|:----:|:-----:|:------------:|:----------:|\
-"""
-
-MARKDOWN_TABLE_ROW = jinja2.Template("| {{ kana }} | {{ kanji }} | {% if ruby_word %}<ruby>{% for ch, furigana in ruby_word %}{{ ch }}<rp>(</rp><rt>{{ furigana }}</rt><rp>)</rp>{% endfor %}</ruby>{% endif %} | {{ definition }} |")
-
 if __name__ == "__main__":
     if len(sys.argv) < 2:
         print(f"Usage: {sys.argv[0]} <input.csv>")
