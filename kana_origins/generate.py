@@ -1,52 +1,67 @@
 #!/usr/bin/env python3
 
 import csv
+import os
 import sys
+from collections import namedtuple
 
 import jinja2
 
+KanaOriginEntry = namedtuple("KanaOriginEntry", ("kana", "kanji", "definition", "ruby"))
+
+
+class KanaOriginGenerator:
+    def __init__(self):
+        self.cache = {}
+
+    def ingest_csv(self, path):
+        with open(path) as file:
+            reader = csv.reader(file)
+
+            # Skip the first row (has the column names)
+            row = next(reader)
+            assert row[0] == "kana"
+
+            # Ingest each row
+            entries = []
+            for row in reader:
+                entries.append(self.ingest_row(row))
+
+        return entries
+
+    def ingest_row(self, row):
+        kana, kanji, word, furigana, definition = row
+
+        # Check if it's a kanji we've already seen, then just copy
+        # Duplicate rows are marked with '-'
+        if kanji in self.cache:
+            assert word == "-", f"Identical kanji {kanji}, but specified twice for {kana}"
+            ruby_word, definition = self.cache[kanji]
+        else:
+            assert word != "-", f"Unique kanji {kanji} marked as duplicate for {kana}"
+            ruby_word = tuple(zip(word, furigana.split(".")))
+            self.cache[kanji] = ruby_word, definition
+
+        return KanaOriginEntry(
+            kana=kana,
+            kanji=kanji,
+            definition=definition,
+            ruby=ruby_word,
+        )
+
+
 if __name__ == "__main__":
-    kanji_cache = {}
-    table_rows = [MARKDOWN_TABLE_HEAD]
-    tables = []
+    # Ingest CSV files
+    generator = KanaOriginGenerator()
+    hiragana = generator.ingest_csv("hiragana.csv")
+    katakana = generator.ingest_csv("katakana.csv")
 
-    # Process the file
-    with open(sys.argv[1]) as file:
-        reader = csv.reader(file)
+    # Set up Jinja environment
+    loader = jinja2.FileSystemLoader(searchpath=".")
+    env = jinja2.Environment(loader=loader)
+    template = env.get_template("document.j2")
 
-        # Skip the first row (has the column names)
-        row = next(reader)
-        assert row[0] == "kana"
-
-        # Process each row
-        for row in reader:
-            kana, kanji, word, furigana, definition = row
-
-            # Control word, start a new table
-            if kana == "%NEW%":
-                tables.append("\n".join(table_rows))
-                table_rows = [MARKDOWN_TABLE_HEAD]
-                continue
-
-            # Check if it's a kanji we've already seen, then just copy
-            # Duplicate rows are marked with '-'
-            if kanji in kanji_cache:
-                assert word == "-", f"Identical kanji {kanji}, but specified twice for {kana}"
-                ruby_word, definition = kanji_cache[kanji]
-            else:
-                assert word != "-", f"Unique kanji {kanji} marked as duplicate for {kana}"
-                ruby_word = tuple(zip(word, furigana.split(".")))
-                kanji_cache[kanji] = ruby_word, definition
-
-            table_rows.append(MARKDOWN_TABLE_ROW.render(
-                kana=kana,
-                kanji=kanji,
-                definition=definition,
-                ruby_word=ruby_word,
-            ))
-
-    if table_rows:
-        tables.append("\n".join(table_rows))
-
-    # Print final output
-    print(DOCUMENT_TEMPLATE.render(tables=tables))
+    # Output markdown
+    with open("README.md", "w") as file:
+        markdown = template.render(hiragana=hiragana, katakana=katakana)
+        file.write(markdown)
