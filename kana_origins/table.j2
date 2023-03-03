@@ -1,0 +1,9 @@
+{% from 'ruby.j2' import render_ruby %}
+
+{% macro build_table(entries) %}
+| Kana | Kanji | Example Word | Definition |
+|:----:|:-----:|:------------:|:----------:|
+{% for entry in entries %}
+| {{ entry.kana }} | {{ entry.kanji }} | {{ render_ruby(entry.ruby) }} | {{ entry.definition }} |
+{% endfor %}
+{% endmacro %}

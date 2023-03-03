@@ -1,26 +1,15 @@
-Chart of the kanji that each kana originated from, together with an example world that utilizes that reading (including [phonosemantic characters](https://en.wikipedia.org/wiki/Chinese_characters#Phono-semantic_compounds)). This is similar to the process used by Heisig at the beginning of [_Remembering the Kanji: Volume II_](https://en.wikipedia.org/wiki/Remembering_the_Kanji_and_Remembering_the_Hanzi). Read that book if you want a better approach towards "kanji with kana sounds".
+{% from 'table.j2' import build_table %}
 
-Also note some of these kanji are too old and not in use, and so are excluded.
-
-## Updating
-
-Requires jinja2 to be installed.
-
-```
-python3 convert.py
-git commit -a
-```
-
-This will generate a new `README.md` file from the data files `raw.csv` and the provided Jinja templates.
+{%- include 'header.j2' %}
 
 ## ひらがな
 
 [Origin Chart](https://commons.wikimedia.org/wiki/File:Hiragana_origin.svg)
 
-{{ tables[0] }}
+{{ build_table(hiragana) }}
 
 ## カタカナ
 
 [Origin Chart](https://commons.wikimedia.org/wiki/File:Katakana_origine.svg)
 
-{{ tables[1] }}
+{{ build_table(katakana) }}

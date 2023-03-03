@@ -6,10 +6,6 @@ import sys
 import jinja2
 
 if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print(f"Usage: {sys.argv[0]} <input.csv>")
-        sys.exit(1)
-
     kanji_cache = {}
     table_rows = [MARKDOWN_TABLE_HEAD]
     tables = []

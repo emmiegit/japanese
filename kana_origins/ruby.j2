@@ -1,0 +1,3 @@
+{% macro render_ruby(parts) %}
+{% if parts %}<ruby>{% for ch, furigana in parts %}{{ ch }}<rp>(</rp><rt>{{ furigana }}</rt><rp>)</rp>{% endfor %}</ruby>{% endif %}
+{% endmacro %}
