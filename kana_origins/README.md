@@ -77,19 +77,19 @@ This will generate a new `README.md` file from the CSV data files and Jinja temp
 
 | Kana | Kanji | Example Word | Definition |
 |:----:|:-----:|:------------:|:----------:|
-| ア | 阿 |  |  |
-| イ | 伊 |  |  |
+| ア | 阿 | <ruby>阿<rp>(</rp><rt>あ</rt><rp>)</rp>呆<rp>(</rp><rt>ほ</rt><rp>)</rp></ruby> | fool, idiot (Kansai dialect) |
+| イ | 伊 | <ruby>伊<rp>(</rp><rt>い</rt><rp>)</rp>呂<rp>(</rp><rt>ろ</rt><rp>)</rp>波<rp>(</rp><rt>は</rt><rp>)</rp></ruby> | traditional ordering of the Japanese syllabary |
 | ウ | 宇 |  |  |
 | エ | 江 | <ruby>江<rp>(</rp><rt>え</rt><rp>)</rp>戸<rp>(</rp><rt>ど</rt><rp>)</rp></ruby> | Edo (historic city, now Tokyo) |
 | オ | 於 |  |  |
 | カ | 加 | <ruby>加<rp>(</rp><rt>か</rt><rp>)</rp>工<rp>(</rp><rt>加工</rt><rp>)</rp></ruby> | manufacturing, processing |
 | キ | 機 | <ruby>掃<rp>(</rp><rt>そう</rt><rp>)</rp>除<rp>(</rp><rt>じ</rt><rp>)</rp>機<rp>(</rp><rt>き</rt><rp>)</rp></ruby> | vacuum cleaner |
 | ク | 久 |  |  |
-| ケ | 介 |  |  |
+| ケ | 介 | &mdash; | &mdash; |
 | コ | 己 | <ruby>自<rp>(</rp><rt>じ</rt><rp>)</rp>己<rp>(</rp><rt>こ</rt><rp>)</rp></ruby> | oneself |
 | サ | 散 | <ruby>散<rp>(</rp><rt>さん</rt><rp>)</rp>歩<rp>(</rp><rt>ぽ</rt><rp>)</rp></ruby> | walk, stroll |
 | シ | 之 | &mdash; | &mdash; |
-| ス | 須 |  |  |
+| ス | 須 | <ruby>必<rp>(</rp><rt>ひっ</rt><rp>)</rp>須<rp>(</rp><rt>す</rt><rp>)</rp></ruby> | indispensable, essential |
 | セ | 世 | <ruby>世<rp>(</rp><rt>せ</rt><rp>)</rp>界<rp>(</rp><rt>かい</rt><rp>)</rp></ruby> | world |
 | ソ | 曽 | <ruby>味<rp>(</rp><rt>み</rt><rp>)</rp>噌<rp>(</rp><rt>そ</rt><rp>)</rp></ruby> | miso |
 | タ | 多 | <ruby>多<rp>(</rp><rt>た</rt><rp>)</rp>分<rp>(</rp><rt>ぶん</rt><rp>)</rp></ruby> | probably, perhaps |
@@ -109,15 +109,15 @@ This will generate a new `README.md` file from the CSV data files and Jinja temp
 | ホ | 保 | <ruby>保<rp>(</rp><rt>ほ</rt><rp>)</rp>険<rp>(</rp><rt>けん</rt><rp>)</rp></ruby> | insurance (policy) |
 | マ | 末 | <ruby>週<rp>(</rp><rt>しゅう</rt><rp>)</rp>末<rp>(</rp><rt>まつ</rt><rp>)</rp></ruby> | weekend |
 | ミ | 三 | <ruby>三<rp>(</rp><rt>みっ</rt><rp>)</rp>つ<rp>(</rp><rt></rt><rp>)</rp></ruby> | three (generic counter) |
-| ム | 牟 |  |  |
+| ム | 牟 | <ruby>釈<rp>(</rp><rt>しゃ</rt><rp>)</rp>迦<rp>(</rp><rt>か</rt><rp>)</rp>牟<rp>(</rp><rt>む</rt><rp>)</rp>尼<rp>(</rp><rt>に</rt><rp>)</rp></ruby> | Gautama Buddha |
 | メ | 女 | <ruby>女<rp>(</rp><rt>め</rt><rp>)</rp>神<rp>(</rp><rt>がみ</rt><rp>)</rp></ruby> | goddess, female diety |
 | モ | 毛 | <ruby>毛<rp>(</rp><rt>もう</rt><rp>)</rp>布<rp>(</rp><rt>ふ</rt><rp>)</rp></ruby> | blanket |
 | ヤ | 也 |  |  |
 | ユ | 由 | <ruby>自<rp>(</rp><rt>じ</rt><rp>)</rp>由<rp>(</rp><rt>ゆう</rt><rp>)</rp></ruby> | freedom, liberty |
-| ヨ | 與 |  |  |
+| ヨ | 與 | <ruby>輿<rp>(</rp><rt>よ</rt><rp>)</rp>論<rp>(</rp><rt>ろん</rt><rp>)</rp></ruby> | public opinion (usually written as 世論) |
 | ラ | 良 | <ruby>奈<rp>(</rp><rt>な</rt><rp>)</rp>良<rp>(</rp><rt>ら</rt><rp>)</rp></ruby> | Nara (prefecture and city) |
 | リ | 利 | <ruby>便<rp>(</rp><rt>べん</rt><rp>)</rp>利<rp>(</rp><rt>り</rt><rp>)</rp></ruby> | convenient |
-| ル | 流 |  |  |
+| ル | 流 | <ruby>流<rp>(</rp><rt>る</rt><rp>)</rp>浪<rp>(</rp><rt>ろう</rt><rp>)</rp></ruby> | vangrancy |
 | レ | 礼 | <ruby>礼<rp>(</rp><rt>れい</rt><rp>)</rp></ruby> | thanks, gratitude |
 | ロ | 呂 | <ruby>お<rp>(</rp><rt></rt><rp>)</rp>風<rp>(</rp><rt>ふ</rt><rp>)</rp>呂<rp>(</rp><rt>ろ</rt><rp>)</rp></ruby> | bath |
 | ワ | 和 | <ruby>和<rp>(</rp><rt>わ</rt><rp>)</rp>風<rp>(</rp><rt>ふう</rt><rp>)</rp></ruby> | Japanese-style |
