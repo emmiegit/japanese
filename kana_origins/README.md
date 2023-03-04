@@ -27,7 +27,7 @@ This will generate a new `README.md` file from the CSV data files and Jinja temp
 | う | 宇 |  |  |
 | え | 衣 |  |  |
 | お | 於 |  |  |
-| か | 加 |  |  |
+| か | 加 | <ruby>加<rp>(</rp><rt>か</rt><rp>)</rp>工<rp>(</rp><rt>加工</rt><rp>)</rp></ruby> | manufacturing, processing |
 | き | 機 | <ruby>掃<rp>(</rp><rt>そう</rt><rp>)</rp>除<rp>(</rp><rt>じ</rt><rp>)</rp>機<rp>(</rp><rt>き</rt><rp>)</rp></ruby> | vacuum cleaner |
 | く | 久 |  |  |
 | け | 計 | <ruby>計<rp>(</rp><rt>けい</rt><rp>)</rp>画<rp>(</rp><rt>かく</rt><rp>)</rp></ruby> | plot, plan |
@@ -47,14 +47,14 @@ This will generate a new `README.md` file from the CSV data files and Jinja temp
 | ぬ | 奴 |  |  |
 | ね | 祢 |  |  |
 | の | 乃 |  |  |
-| は | 波 |  |  |
+| は | 波 | <ruby>波<rp>(</rp><rt>は</rt><rp>)</rp>長<rp>(</rp><rt>ちょう</rt><rp>)</rp></ruby> | wavelength |
 | ひ | 比 | <ruby>比<rp>(</rp><rt>ひ</rt><rp>)</rp>諭<rp>(</rp><rt>ゆ</rt><rp>)</rp></ruby> | simile, metaphor, allegory |
 | ふ | 不 | <ruby>不<rp>(</rp><rt>ふ</rt><rp>)</rp>便<rp>(</rp><rt>べん</rt><rp>)</rp></ruby> | inconvenient |
 | へ | 部 | <ruby>部<rp>(</rp><rt>へ</rt><rp>)</rp>屋<rp>(</rp><rt>や</rt><rp>)</rp></ruby> | room |
 | ほ | 保 | <ruby>保<rp>(</rp><rt>ほ</rt><rp>)</rp>険<rp>(</rp><rt>けん</rt><rp>)</rp></ruby> | insurance (policy) |
 | ま | 末 | <ruby>週<rp>(</rp><rt>しゅう</rt><rp>)</rp>末<rp>(</rp><rt>まつ</rt><rp>)</rp></ruby> | weekend |
 | み | 美 | <ruby>絵<rp>(</rp><rt>え</rt><rp>)</rp>美<rp>(</rp><rt>み</rt><rp>)</rp></ruby> | Emi (name) |
-| む | 武 |  |  |
+| む | 武 | <ruby>武<rp>(</rp><rt>む</rt><rp>)</rp>者<rp>(</rp><rt>しゃ</rt><rp>)</rp></ruby> | warrior |
 | め | 女 | <ruby>女<rp>(</rp><rt>め</rt><rp>)</rp>神<rp>(</rp><rt>がみ</rt><rp>)</rp></ruby> | goddess, female diety |
 | も | 毛 | <ruby>毛<rp>(</rp><rt>もう</rt><rp>)</rp>布<rp>(</rp><rt>ふ</rt><rp>)</rp></ruby> | blanket |
 | ら | 良 | <ruby>奈<rp>(</rp><rt>な</rt><rp>)</rp>良<rp>(</rp><rt>ら</rt><rp>)</rp></ruby> | Nara (prefecture and city) |
@@ -82,7 +82,7 @@ This will generate a new `README.md` file from the CSV data files and Jinja temp
 | ウ | 宇 |  |  |
 | エ | 江 | <ruby>江<rp>(</rp><rt>え</rt><rp>)</rp>戸<rp>(</rp><rt>ど</rt><rp>)</rp></ruby> | Edo (historic city, now Tokyo) |
 | オ | 於 |  |  |
-| カ | 加 |  |  |
+| カ | 加 | <ruby>加<rp>(</rp><rt>か</rt><rp>)</rp>工<rp>(</rp><rt>加工</rt><rp>)</rp></ruby> | manufacturing, processing |
 | キ | 機 | <ruby>掃<rp>(</rp><rt>そう</rt><rp>)</rp>除<rp>(</rp><rt>じ</rt><rp>)</rp>機<rp>(</rp><rt>き</rt><rp>)</rp></ruby> | vacuum cleaner |
 | ク | 久 |  |  |
 | ケ | 介 |  |  |
@@ -102,7 +102,7 @@ This will generate a new `README.md` file from the CSV data files and Jinja temp
 | ヌ | 奴 |  |  |
 | ネ | 祢 |  |  |
 | ノ | 乃 |  |  |
-| ハ | 八 | <ruby>八<rp>(</rp><rt>はち</rt><rp>)</rp></ruby> | eight |
+| ハ | 入 | <ruby>入<rp>(</rp><rt>は</rt><rp>)</rp>る<rp>(</rp><rt>いる</rt><rp>)</rp></ruby> | to enter |
 | ヒ | 比 | <ruby>比<rp>(</rp><rt>ひ</rt><rp>)</rp>諭<rp>(</rp><rt>ゆ</rt><rp>)</rp></ruby> | simile, metaphor, allegory |
 | フ | 不 | <ruby>不<rp>(</rp><rt>ふ</rt><rp>)</rp>便<rp>(</rp><rt>べん</rt><rp>)</rp></ruby> | inconvenient |
 | ヘ | 部 | <ruby>部<rp>(</rp><rt>へ</rt><rp>)</rp>屋<rp>(</rp><rt>や</rt><rp>)</rp></ruby> | room |
