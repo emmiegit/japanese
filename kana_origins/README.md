@@ -92,7 +92,7 @@ This will generate a new `README.md` file from the CSV data files and Jinja temp
 | ス | 須 |  |  |
 | セ | 世 | <ruby>世<rp>(</rp><rt>せ</rt><rp>)</rp>界<rp>(</rp><rt>かい</rt><rp>)</rp></ruby> | world |
 | ソ | 曽 | <ruby>味<rp>(</rp><rt>み</rt><rp>)</rp>噌<rp>(</rp><rt>そ</rt><rp>)</rp></ruby> | miso |
-| タ | 多 |  |  |
+| タ | 多 | <ruby>多<rp>(</rp><rt>た</rt><rp>)</rp>分<rp>(</rp><rt>ぶん</rt><rp>)</rp></ruby> | probably, perhaps |
 | チ | 千 | <ruby>千<rp>(</rp><rt>ち</rt><rp>)</rp>葉<rp>(</rp><rt>ば</rt><rp>)</rp></ruby> | Chiba (prefecture and city) |
 | ツ | 川 |  |  |
 | テ | 天 | <ruby>天<rp>(</rp><rt>てん</rt><rp>)</rp>使<rp>(</rp><rt>し</rt><rp>)</rp></ruby> | angel, heavenly messenger |
