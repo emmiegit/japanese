@@ -10,7 +10,7 @@ kana,kanji,word,furigana,definition
 け,計,計画,けい.かく,"plot, plan"
 こ,己,自己,じ.こ,"oneself"
 さ,左,左翼,さ.よく,"left-wing politics"
-し,之,,,
+し,之,~,,
 す,寸,寸前,すん.ぜん,"just before, on the verge of"
 せ,世,世界,せ.かい,"world"
 そ,曽,味噌,み.そ,"miso"
@@ -23,7 +23,7 @@ kana,kanji,word,furigana,definition
 に,仁,二,に,"two"
 ぬ,奴,,,
 ね,祢,,,
-の,乃,,,
+の,乃,~,,
 は,波,波長,は.ちょう,"wavelength"
 ひ,比,比諭,ひ.ゆ,"simile, metaphor, allegory"
 ふ,不,不便,ふ.べん,"inconvenient"
@@ -44,4 +44,4 @@ kana,kanji,word,furigana,definition
 よ,与,与党,よ.とう,"ruling party"
 わ,和,和風,わ.ふう,"Japanese-style"
 を,遠,,,
-ん,无,,,
+ん,无,~,,

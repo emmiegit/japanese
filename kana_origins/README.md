@@ -22,6 +22,7 @@ This will generate a new `README.md` file from the CSV data files and Jinja temp
 
 | Kana | Kanji | Example Word | Definition |
 |:----:|:-----:|:------------:|:----------:|
+
 | あ | 安 | <ruby>安<rp>(</rp><rt>あん</rt><rp>)</rp>全<rp>(</rp><rt>ぜん</rt><rp>)</rp></ruby> | safety, security |
 | い | 以 | <ruby>以<rp>(</rp><rt>い</rt><rp>)</rp>上<rp>(</rp><rt>じょう</rt><rp>)</rp></ruby> | more than |
 | う | 宇 |  |  |
@@ -33,7 +34,7 @@ This will generate a new `README.md` file from the CSV data files and Jinja temp
 | け | 計 | <ruby>計<rp>(</rp><rt>けい</rt><rp>)</rp>画<rp>(</rp><rt>かく</rt><rp>)</rp></ruby> | plot, plan |
 | こ | 己 | <ruby>自<rp>(</rp><rt>じ</rt><rp>)</rp>己<rp>(</rp><rt>こ</rt><rp>)</rp></ruby> | oneself |
 | さ | 左 | <ruby>左<rp>(</rp><rt>さ</rt><rp>)</rp>翼<rp>(</rp><rt>よく</rt><rp>)</rp></ruby> | left-wing politics |
-| し | 之 |  |  |
+| し | 之 | &mdash; | &mdash; |
 | す | 寸 | <ruby>寸<rp>(</rp><rt>すん</rt><rp>)</rp>前<rp>(</rp><rt>ぜん</rt><rp>)</rp></ruby> | just before, on the verge of |
 | せ | 世 | <ruby>世<rp>(</rp><rt>せ</rt><rp>)</rp>界<rp>(</rp><rt>かい</rt><rp>)</rp></ruby> | world |
 | そ | 曽 | <ruby>味<rp>(</rp><rt>み</rt><rp>)</rp>噌<rp>(</rp><rt>そ</rt><rp>)</rp></ruby> | miso |
@@ -46,7 +47,7 @@ This will generate a new `README.md` file from the CSV data files and Jinja temp
 | に | 仁 | <ruby>二<rp>(</rp><rt>に</rt><rp>)</rp></ruby> | two |
 | ぬ | 奴 |  |  |
 | ね | 祢 |  |  |
-| の | 乃 |  |  |
+| の | 乃 | &mdash; | &mdash; |
 | は | 波 | <ruby>波<rp>(</rp><rt>は</rt><rp>)</rp>長<rp>(</rp><rt>ちょう</rt><rp>)</rp></ruby> | wavelength |
 | ひ | 比 | <ruby>比<rp>(</rp><rt>ひ</rt><rp>)</rp>諭<rp>(</rp><rt>ゆ</rt><rp>)</rp></ruby> | simile, metaphor, allegory |
 | ふ | 不 | <ruby>不<rp>(</rp><rt>ふ</rt><rp>)</rp>便<rp>(</rp><rt>べん</rt><rp>)</rp></ruby> | inconvenient |
@@ -67,8 +68,7 @@ This will generate a new `README.md` file from the CSV data files and Jinja temp
 | よ | 与 | <ruby>与<rp>(</rp><rt>よ</rt><rp>)</rp>党<rp>(</rp><rt>とう</rt><rp>)</rp></ruby> | ruling party |
 | わ | 和 | <ruby>和<rp>(</rp><rt>わ</rt><rp>)</rp>風<rp>(</rp><rt>ふう</rt><rp>)</rp></ruby> | Japanese-style |
 | を | 遠 |  |  |
-| ん | 无 |  |  |
-
+| ん | 无 | &mdash; | &mdash; |
 
 ## カタカナ
 
@@ -77,6 +77,7 @@ This will generate a new `README.md` file from the CSV data files and Jinja temp
 
 | Kana | Kanji | Example Word | Definition |
 |:----:|:-----:|:------------:|:----------:|
+
 | ア | 阿 |  |  |
 | イ | 伊 |  |  |
 | ウ | 宇 |  |  |
@@ -88,7 +89,7 @@ This will generate a new `README.md` file from the CSV data files and Jinja temp
 | ケ | 介 |  |  |
 | コ | 己 | <ruby>自<rp>(</rp><rt>じ</rt><rp>)</rp>己<rp>(</rp><rt>こ</rt><rp>)</rp></ruby> | oneself |
 | サ | 散 | <ruby>散<rp>(</rp><rt>さん</rt><rp>)</rp>歩<rp>(</rp><rt>ぽ</rt><rp>)</rp></ruby> | walk, stroll |
-| シ | 之 |  |  |
+| シ | 之 | &mdash; | &mdash; |
 | ス | 須 |  |  |
 | セ | 世 | <ruby>世<rp>(</rp><rt>せ</rt><rp>)</rp>界<rp>(</rp><rt>かい</rt><rp>)</rp></ruby> | world |
 | ソ | 曽 | <ruby>味<rp>(</rp><rt>み</rt><rp>)</rp>噌<rp>(</rp><rt>そ</rt><rp>)</rp></ruby> | miso |
@@ -101,7 +102,7 @@ This will generate a new `README.md` file from the CSV data files and Jinja temp
 | ニ | 仁 | <ruby>二<rp>(</rp><rt>に</rt><rp>)</rp></ruby> | two |
 | ヌ | 奴 |  |  |
 | ネ | 祢 |  |  |
-| ノ | 乃 |  |  |
+| ノ | 乃 | &mdash; | &mdash; |
 | ハ | 入 | <ruby>入<rp>(</rp><rt>は</rt><rp>)</rp>る<rp>(</rp><rt>いる</rt><rp>)</rp></ruby> | to enter |
 | ヒ | 比 | <ruby>比<rp>(</rp><rt>ひ</rt><rp>)</rp>諭<rp>(</rp><rt>ゆ</rt><rp>)</rp></ruby> | simile, metaphor, allegory |
 | フ | 不 | <ruby>不<rp>(</rp><rt>ふ</rt><rp>)</rp>便<rp>(</rp><rt>べん</rt><rp>)</rp></ruby> | inconvenient |
@@ -121,4 +122,4 @@ This will generate a new `README.md` file from the CSV data files and Jinja temp
 | レ | 礼 | <ruby>礼<rp>(</rp><rt>れい</rt><rp>)</rp></ruby> | thanks, gratitude |
 | ロ | 呂 | <ruby>お<rp>(</rp><rt></rt><rp>)</rp>風<rp>(</rp><rt>ふ</rt><rp>)</rp>呂<rp>(</rp><rt>ろ</rt><rp>)</rp></ruby> | bath |
 | ワ | 和 | <ruby>和<rp>(</rp><rt>わ</rt><rp>)</rp>風<rp>(</rp><rt>ふう</rt><rp>)</rp></ruby> | Japanese-style |
-| ン | 尓 |  |  |
+| ン | 尓 | &mdash; | &mdash; |

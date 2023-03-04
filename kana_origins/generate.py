@@ -7,7 +7,7 @@ from collections import namedtuple
 
 import jinja2
 
-KanaOriginEntry = namedtuple("KanaOriginEntry", ("kana", "kanji", "definition", "ruby"))
+KanaOriginEntry = namedtuple("KanaOriginEntry", ("kana", "kanji", "definition", "ruby", "present"))
 
 
 class KanaOriginGenerator:
@@ -36,7 +36,13 @@ class KanaOriginGenerator:
         # Intentionally missing rows are marked with '~'
         if word == "~":
             self.cache[kanji] = None
-            return None
+            return KanaOriginEntry(
+                kana=kana,
+                kanji=kanji,
+                definition=None,
+                ruby=None,
+                present=False,
+            )
 
         # Check if it's a kanji we've already seen, then just copy
         # Duplicate rows are marked with '-'
@@ -51,6 +57,7 @@ class KanaOriginGenerator:
                     kanji=kanji,
                     definition=None,
                     ruby=None,
+                    present=False,
                 )
             else:
                 # Otherwise, build as normal
@@ -65,6 +72,7 @@ class KanaOriginGenerator:
             kanji=kanji,
             definition=definition,
             ruby=ruby_word,
+            present=True,
         )
 
 
