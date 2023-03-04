@@ -114,7 +114,7 @@ This will generate a new `README.md` file from the CSV data files and Jinja temp
 | モ | 毛 | <ruby>毛<rp>(</rp><rt>もう</rt><rp>)</rp>布<rp>(</rp><rt>ふ</rt><rp>)</rp></ruby> | blanket |
 | ヤ | 也 | &mdash; | &mdash; |
 | ユ | 由 | <ruby>自<rp>(</rp><rt>じ</rt><rp>)</rp>由<rp>(</rp><rt>ゆう</rt><rp>)</rp></ruby> | freedom, liberty |
-| ヨ | 與 | <ruby>輿<rp>(</rp><rt>よ</rt><rp>)</rp>論<rp>(</rp><rt>ろん</rt><rp>)</rp></ruby> | public opinion <small>(usually written as 世論)</small> |
+| ヨ | 與 | <ruby>輿<rp>(</rp><rt>よ</rt><rp>)</rp>論<rp>(</rp><rt>ろん</rt><rp>)</rp></ruby> | public opinion (usually written as 世論) |
 | ラ | 良 | <ruby>奈<rp>(</rp><rt>な</rt><rp>)</rp>良<rp>(</rp><rt>ら</rt><rp>)</rp></ruby> | Nara (prefecture and city) |
 | リ | 利 | <ruby>便<rp>(</rp><rt>べん</rt><rp>)</rp>利<rp>(</rp><rt>り</rt><rp>)</rp></ruby> | convenient |
 | ル | 流 | <ruby>流<rp>(</rp><rt>る</rt><rp>)</rp>浪<rp>(</rp><rt>ろう</rt><rp>)</rp></ruby> | vangrancy |
