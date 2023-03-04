@@ -3,7 +3,11 @@
 {% macro build_table(entries) %}
 | Kana | Kanji | Example Word | Definition |
 |:----:|:-----:|:------------:|:----------:|
-{%- for entry in entries %}
+{% for entry in entries -%}
+{% if entry.definition -%}
 | {{ entry.kana }} | {{ entry.kanji }} | {{ render_ruby(entry.ruby) }} | {{ entry.definition }} |
-{%- endfor %}
-{% endmacro %}
+{%- else %}
+| {{ entry.kana }} | {{ entry.kanji }} | &mdash; | &mdash; |
+{% endif %}
+{% endfor %}
+{%- endmacro %}

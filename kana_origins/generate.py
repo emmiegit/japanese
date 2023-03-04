@@ -32,11 +32,29 @@ class KanaOriginGenerator:
     def ingest_row(self, row):
         kana, kanji, word, furigana, definition = row
 
+        # If this character doesn't have an example word, then return None.
+        # Intentionally missing rows are marked with '~'
+        if word == "~":
+            self.cache[kanji] = None
+            return None
+
         # Check if it's a kanji we've already seen, then just copy
         # Duplicate rows are marked with '-'
         if kanji in self.cache:
             assert word == "-", f"Identical kanji {kanji}, but specified twice for {kana}"
-            ruby_word, definition = self.cache[kanji]
+            entry = self.cache[kanji]
+
+            if entry is None:
+                # No example word
+                return KanaOriginEntry(
+                    kana=kana,
+                    kanji=kanji,
+                    definition=None,
+                    ruby=None,
+                )
+            else:
+                # Otherwise, build as normal
+                ruby_word, definition = self.cache[kanji]
         else:
             assert word != "-", f"Unique kanji {kanji} marked as duplicate for {kana}"
             ruby_word = tuple(zip(word, furigana.split(".")))
