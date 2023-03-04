@@ -1,4 +1,4 @@
-<!-- This Markdown file is generated automatically: edit header.j2 instead -->
+<!-- This Markdown file is generated automatically: edit the Jinja templates instead -->
 
 Chart of the kanji that each kana originated from, together with an example world that utilizes that reading (including [phonosemantic characters](https://en.wikipedia.org/wiki/Chinese_characters#Phono-semantic_compounds)). This is similar to the process used by Heisig at the beginning of [_Remembering the Kanji: Volume II_](https://en.wikipedia.org/wiki/Remembering_the_Kanji_and_Remembering_the_Hanzi). Read that book if you want a better approach towards "kanji with kana sounds".
 
@@ -22,7 +22,6 @@ This will generate a new `README.md` file from the CSV data files and Jinja temp
 
 | Kana | Kanji | Example Word | Definition |
 |:----:|:-----:|:------------:|:----------:|
-
 | あ | 安 | <ruby>安<rp>(</rp><rt>あん</rt><rp>)</rp>全<rp>(</rp><rt>ぜん</rt><rp>)</rp></ruby> | safety, security |
 | い | 以 | <ruby>以<rp>(</rp><rt>い</rt><rp>)</rp>上<rp>(</rp><rt>じょう</rt><rp>)</rp></ruby> | more than |
 | う | 宇 |  |  |
@@ -70,6 +69,7 @@ This will generate a new `README.md` file from the CSV data files and Jinja temp
 | を | 遠 |  |  |
 | ん | 无 | &mdash; | &mdash; |
 
+
 ## カタカナ
 
 [Origin Chart](https://commons.wikimedia.org/wiki/File:Katakana_origine.svg)
@@ -77,7 +77,6 @@ This will generate a new `README.md` file from the CSV data files and Jinja temp
 
 | Kana | Kanji | Example Word | Definition |
 |:----:|:-----:|:------------:|:----------:|
-
 | ア | 阿 |  |  |
 | イ | 伊 |  |  |
 | ウ | 宇 |  |  |

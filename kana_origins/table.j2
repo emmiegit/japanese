@@ -4,10 +4,14 @@
 | Kana | Kanji | Example Word | Definition |
 |:----:|:-----:|:------------:|:----------:|
 {% for entry in entries -%}
-{% if entry.present %}
+{% if entry.present %}{{ build_row(entry) }}{% else %}{{ build_empty_row(entry) }}{% endif %}
+{% endfor %}
+{%- endmacro %}
+
+{% macro build_row(entry) -%}
 | {{ entry.kana }} | {{ entry.kanji }} | {{ render_ruby(entry.ruby) }} | {{ entry.definition }} |
-{%- else %}
+{%- endmacro %}
+
+{% macro build_empty_row(entry) -%}
 | {{ entry.kana }} | {{ entry.kanji }} | &mdash; | &mdash; |
-{%- endif %}
-{%- endfor %}
 {%- endmacro %}
