@@ -11,25 +11,29 @@
     <caption>Days of the Week</caption>
     <thead>
       <tr>
+        <th>{{ words.word }}</th>
         <th>{{ words.english }}</th>
         <th>{{ words.planet }}</th>
         <th>{{ words.symbol }}</th>
+        <th title="{{ words.kanji_hiragana }}">{{ words.kanji }}</th>
         <th>{{ words.hiragana }}</th>
-        <th>{{ words.word }}</th>
       </tr>
     </thead>
     <tbody>
       {% for week_day in week_days %}
         <tr>
+          <td>
+            {{ ruby(
+              [week_day.kanji] + after.kanji,
+              [week_day.hiragana] + after.hiragana,
+              use_furigana,
+              ) }}
+          </td>
           <td>{{ week_day.english }}</td>
           <td>{{ week_day.planet }}</td>
+          <td>{{ week_day.symbol }}</td>
           <td>{{ week_day.kanji }}</td>
           <td>{{ week_day.hiragana }}</td>
-          <td>{{ ruby(
-            [week_day.kanji] + after.kanji,
-            [week_day.hiragana] + after.hiragana,
-            use_furigana,
-          ) }}</td>
         </tr>
       {% endfor %}
     </tbody>
