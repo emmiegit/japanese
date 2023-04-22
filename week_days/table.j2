@@ -1,0 +1,38 @@
+{% from 'utils.j2' import ruby %}
+
+<html>
+<head>
+  <title>{{ year }}年 {{ month }}月 カレンダー</title>
+</head>
+<body>
+  {% include 'styles.j2' %}
+
+  <table class="weekdays">
+    <caption>Days of the Week</caption>
+    <thead>
+      <tr>
+        <th>{{ words.english }}</th>
+        <th>{{ words.planet }}</th>
+        <th>{{ words.symbol }}</th>
+        <th>{{ words.hiragana }}</th>
+        <th>{{ words.word }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for week_day in week_days %}
+        <tr>
+          <td>{{ week_day.english }}</td>
+          <td>{{ week_day.planet }}</td>
+          <td>{{ week_day.kanji }}</td>
+          <td>{{ week_day.hiragana }}</td>
+          <td>{{ ruby(
+            [week_day.kanji] + after.kanji,
+            [week_day.hiragana] + after.hiragana,
+            use_furigana,
+          ) }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</body>
+</html>
