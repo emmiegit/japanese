@@ -38,5 +38,31 @@
       {% endfor %}
     </tbody>
   </table>
+
+  <div class="explanation">
+    <h3>How to use this table</h3>
+
+    <p>
+      Preface: "曜日" means "day of week". The character "日" means both "sun", and the period of time associated with the sun (one day).
+    </p>
+
+    <p>
+      The days of the week in Japanese are a combination of ancient Chinese words for each of the planets
+      and the western seven-day week. Each day of the week has an associated celestial body, some of which
+      are fairly obvious (e.g., Monday is the day of the Moon). This is then combined with the word
+      for that planet in Japanese. For instance Mercury, {{ ruby(["水", "星"], ["すい", "せい"], use_furigana) }}
+      (literally "water planet"), means the associated weekday (Wednesday) becomes "water day"
+      ({{ ruby(["水", "曜", "日"], ["すい", "よう", "び"], use_furigana) }}).
+    </p>
+
+    <p>
+      If you're having trouble coming up with mnemonics for associating the kanji / symbol with their planetary
+      body or day of week, think about how you would identify each planet before the advent of modern telescopy.
+      For instance, Venus ({{ ruby(["金", "星"], ["きん", "せい"], use_furigana) }}) is kind of yellow /
+      gold-colored, at a distance right? Or associate it with the day of the week, such as Saturday
+      ({{ ruby(["土", "星"], ["ど", "せい"], use_furigana) }}) being your first day after the work week,
+      so you work in the <em>dirt</em> (planting flowers in your garden or something).
+    </p>
+  </div>
 </body>
 </html>
