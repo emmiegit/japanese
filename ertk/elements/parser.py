@@ -103,12 +103,12 @@ def p_list_item_group(p):
 
     p[0] = p[2]
 
-def p_container_horizontal(p):
+def p_within(p):
     '''
-    container_horizontal : expression '~' expression
+    within : expression '~' expression
     '''
 
-    p[0] = HorizontalContainer(outer=p[1], inner=p[3])
+    p[0] = Within(outer=p[1], inner=p[3])
 
 def p_error(p):
     print(f"Syntax error at {p.value!r}")
