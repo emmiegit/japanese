@@ -65,9 +65,9 @@ def p_expression_list(p):
 
     p[0] = p[1]
 
-def p_expression_container(p):
+def p_expression_within(p):
     '''
-    expression : container_horizontal
+    expression : within
     '''
 
     p[0] = p[1]
