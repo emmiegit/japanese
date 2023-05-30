@@ -20,6 +20,13 @@
         {% endif %}
       {% endfor %}
     </span>
+  {% elif isinstance(element, types.Within) %}
+    <span class="within">
+      <span class="outer">{{ render(element.outer) }}</span>
+      <span class="separator left">⌈</span>
+      <span class="inner">{{ render(element.inner) }}</span>
+      <span class="separator right">⌋</span>
+    </span>
   {% endif %}
 {% endmacro %}
 
