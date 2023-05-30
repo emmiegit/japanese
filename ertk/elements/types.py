@@ -3,8 +3,9 @@ from typing import Union
 
 Name = str
 Multiplied = namedtuple('Multiplied', ('count', 'expression'))
-HorizontalList = namedtuple('HorizontalList', ('items'))
-VerticalList = namedtuple('VerticalList', ('items'))
+HorizontalList = namedtuple('HorizontalList', ('items',))
+VerticalList = namedtuple('VerticalList', ('items',))
+HorizontalContainer = namedtuple('HorizontalContainer', ('outer', 'inner'))
 
 Expression = Union[Name, Multiplied, HorizontalList, VerticalList]
 

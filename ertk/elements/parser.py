@@ -10,7 +10,7 @@ tokens = (
     'NUMBER',
 )
 
-literals = ['+', '/', '*', '(', ')', '[', ']']
+literals = ['+', '/', '*', '~', '(', ')', '[', ']']
 
 t_ignore = ' \t\n'
 t_NAME = r'[a-zA-Z]([ ]*[\w\-]+)*'  # names, including spaces inside (e.g. "make a deal" or "fortune-telling")
@@ -31,6 +31,8 @@ lexer = lex()
 precedence = (
     ('left', '+'),
     ('left', '/'),
+    ('left', '~'),
+    ('left', '*'),
 )
 
 def p_expression_name(p):
@@ -59,6 +61,13 @@ def p_expression_list(p):
     '''
     expression : list_horizontal
                | list_vertical
+    '''
+
+    p[0] = p[1]
+
+def p_expression_container(p):
+    '''
+    expression : container_horizontal
     '''
 
     p[0] = p[1]
@@ -93,6 +102,13 @@ def p_list_item_group(p):
     '''
 
     p[0] = p[2]
+
+def p_container_horizontal(p):
+    '''
+    container_horizontal : expression '~' expression
+    '''
+
+    p[0] = HorizontalContainer(outer=p[1], inner=p[3])
 
 def p_error(p):
     print(f"Syntax error at {p.value!r}")
