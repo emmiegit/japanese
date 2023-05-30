@@ -10,10 +10,14 @@
     padding: 0.2em;
 }
 
-.element .vertical .under {
+.element .vertical > .under {
     border-top: thin solid black;
 }
 
-.element .vertical .separator {
+.element .vertical > .separator {
     display: none;
+}
+
+.element .within > .outer {
+    font-size: 1.2em;
 }

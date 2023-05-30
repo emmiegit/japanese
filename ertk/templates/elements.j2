@@ -23,9 +23,9 @@
   {% elif isinstance(element, types.Within) %}
     <span class="within">
       <span class="outer">{{ render(element.outer) }}</span>
-      <span class="separator left">⌈</span>
+      <span class="group left">⌈</span>
       <span class="inner">{{ render(element.inner) }}</span>
-      <span class="separator right">⌋</span>
+      <span class="group right">⌋</span>
     </span>
   {% endif %}
 {% endmacro %}
