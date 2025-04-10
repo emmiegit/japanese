@@ -27,7 +27,7 @@ This will generate a new `README.md` file from the CSV data files and Jinja temp
 | う | 宇 | <ruby>宇<rp>(</rp><rt>う</rt><rp>)</rp>宙<rp>(</rp><rt>ちゅう</rt><rp>)</rp></ruby> | outer space, the universe |
 | え | 衣 | <ruby>衣<rp>(</rp><rt>え</rt><rp>)</rp>紋<rp>(</rp><rt>もん</rt><rp>)</rp>掛<rp>(</rp><rt>か</rt><rp>)</rp>け<rp>(</rp><rt></rt><rp>)</rp></ruby> | clothes hanger |
 | お | 於 | &mdash; | &mdash; |
-| か | 加 | <ruby>加<rp>(</rp><rt>か</rt><rp>)</rp>工<rp>(</rp><rt>加工</rt><rp>)</rp></ruby> | manufacturing, processing |
+| か | 加 | <ruby>加<rp>(</rp><rt>か</rt><rp>)</rp>工<rp>(</rp><rt>こう</rt><rp>)</rp></ruby> | manufacturing, processing |
 | き | 機 | <ruby>掃<rp>(</rp><rt>そう</rt><rp>)</rp>除<rp>(</rp><rt>じ</rt><rp>)</rp>機<rp>(</rp><rt>き</rt><rp>)</rp></ruby> | vacuum cleaner |
 | く | 久 | <ruby>久<rp>(</rp><rt>く</rt><rp>)</rp>遠<rp>(</rp><rt>おん</rt><rp>)</rp></ruby> | eternity |
 | け | 計 | <ruby>計<rp>(</rp><rt>けい</rt><rp>)</rp>画<rp>(</rp><rt>かく</rt><rp>)</rp></ruby> | plot, plan |
@@ -82,7 +82,7 @@ This will generate a new `README.md` file from the CSV data files and Jinja temp
 | ウ | 宇 | <ruby>宇<rp>(</rp><rt>う</rt><rp>)</rp>宙<rp>(</rp><rt>ちゅう</rt><rp>)</rp></ruby> | outer space, the universe |
 | エ | 江 | <ruby>江<rp>(</rp><rt>え</rt><rp>)</rp>戸<rp>(</rp><rt>ど</rt><rp>)</rp></ruby> | Edo (historic city, now Tokyo) |
 | オ | 於 | &mdash; | &mdash; |
-| カ | 加 | <ruby>加<rp>(</rp><rt>か</rt><rp>)</rp>工<rp>(</rp><rt>加工</rt><rp>)</rp></ruby> | manufacturing, processing |
+| カ | 加 | <ruby>加<rp>(</rp><rt>か</rt><rp>)</rp>工<rp>(</rp><rt>こう</rt><rp>)</rp></ruby> | manufacturing, processing |
 | キ | 機 | <ruby>掃<rp>(</rp><rt>そう</rt><rp>)</rp>除<rp>(</rp><rt>じ</rt><rp>)</rp>機<rp>(</rp><rt>き</rt><rp>)</rp></ruby> | vacuum cleaner |
 | ク | 久 | <ruby>久<rp>(</rp><rt>く</rt><rp>)</rp>遠<rp>(</rp><rt>おん</rt><rp>)</rp></ruby> | eternity |
 | ケ | 介 | &mdash; | &mdash; |
